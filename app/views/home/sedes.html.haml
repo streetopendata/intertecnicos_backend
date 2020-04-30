@@ -1,0 +1,109 @@
+%head
+  :css
+    p{
+        text-align: justify;
+    }
+%body
+  #app
+    #btn-to-top-wrap
+      %a#btn-to-top.circled{"data-visible-offset" => "800", :href => "javascript:void(0);"}
+    %main
+      .nt-section
+        .container-fluid.pl-0.pr-0
+          .row.no-gutters
+            .nt-column.col-sm-12
+              %header#top-bar.top-bar.top-bar--dark.nt-shortcode-header{"data-nav-anchor" => "true", "data-res-css" => "       #nt-logo.top-bar__logo.site-logo img { width:159px; } #nt-logo.top-bar__logo.site-logo img { height:45px; }  ", :style => "position: fixed;background: #fff;top: 0;padding: 0;"}
+                .top-bar__inner
+                  .container-fluid
+                    .row.align-items-center.no-gutters
+                      %a#nt-logo.top-bar__logo.site-logo{:href => "../index.html"}
+                        =image_tag 'logo.svg', class: 'img-fluid main-logo', style: "margin: 20px 0px 14px 25px;"
+                      %a#top-bar__navigation-toggler.top-bar__navigation-toggler{:href => "javascript:void(0);"}
+                        %span
+                      .top-bar__collapse
+                        %nav#top-bar__navigation.top-bar__navigation
+      #home.nt-section{:name => "home"}
+        .container-fluid.pl-0.pr-0
+          .row.no-gutters
+            .nt-column.col-sm-12
+              #start-screen.start-screen.start-screen--full-height.start-screen--style-7{:style => "padding-top: 0px !important; margin-top: 100px !important;"}
+                .start-screen__bg-container
+                  .start-screen__bg{:style => "background-image: url(../wp-content/uploads/2019/05/bg_1-2.jpg);background-position: left top;"}
+                .start-screen__content-container
+                  .start-screen__content__item.align-items-center
+                    .container
+                      .row
+                        .col-12.col-md-10.col-lg-6
+                          %h6.__subtitle{:style => "color: #008A78;  "} En Intertecnicos estamos comprometidos con la prevención del COVID-19
+                          %h2
+                            %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial
+                          %p
+                            Como medida preventiva y velando por el bienestar de todos, hemos establecido medidas preventivas dentro de nuestra compañía para contribuir a disminuir los contagios del coronavirus.
+                          %hr/
+                          %p
+                            Cumpliendo con la directriz de la Alcaldía de Bogotá, para que las empresas autorizadas por el Gobierno nacional en el decreto 593 de 2020,  a continuación se encuentra disponible para las autoridades competentes la información de nuestras sedes y personal debidamente actualizada.
+                          %p Descargar informacion  de sedes y personal a cargo
+                          %br/
+                          .row
+                            .col-md-6.col-sm-12
+                              = link_to "Información de sedes y de personal", "home/download_intertecnicos", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1',  :download => "Intertecnicos"
+                            .col-md-6.col-sm-12
+                              = link_to "Plan de Manejo de Demanda Segura", "home/download_file", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1',  :download => "Intertecnicos"
+
+                        .col-12.col-md-10.col-lg-6
+                          %div{:style => "margin-left: 30px;"}
+                            =image_tag 'worker.jpg', class: 'img-item item'
+      #footer-widgetarea.nt-section.pt-60.pb-75.footer.footer--s4.footer--color-light.vc_custom_1558951260637.nt-has-fill
+        .container
+          .row
+            .z-index-2.nt-column.col-sm-12.col-lg-4.col-md-8.col-12
+              .wpb_single_image.wpb_content_element.vc_align_left
+                %figure.wpb_wrapper.vc_figure
+                  .vc_single_image-wrapper.vc_box_border_grey
+                    =image_tag 'logo_white.png', class: 'vc_single_image-img'
+              .spacer.py-4
+              .s-btns.s-btns--md.s-btns--light.s-btns--rounded
+                %ul.d-flex.flex-row.flex-wrap.align-items-center.justify-content-lg-start
+                  %li.social-media
+                    %a.f{:href => "#"}
+                      %i.fontello-facebook
+                  %li.social-media
+                    %a.y{:href => "#"}
+                      %i.fontello-linkedin
+                  %li.social-media
+                    %a.i{:href => "#"}
+                      %i.fontello-instagram
+            .z-index-3.nt-column.col-sm-12.col-lg-4.col-md-5.col-12
+              .spacer.py-4.d-lg-none
+              %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"} Contacto
+              .wpb_text_column.wpb_content_element.vc_custom_1559258220252
+                .wpb_wrapper
+                  %address.footer__address.footer__address--s2
+                  %ul
+                    %li
+                      %i.__ico.fontello-location>
+                      Carrera 74b 64f-20, Bogotá
+                    %li
+                      %i.__ico.fontello-mail-1
+                      %a{:href => "mailto:info@intertecnicos.com"}
+                        %span.__cf_email__ info@intertecnicos.com
+                    %li
+                      %i.__ico.fontello-phone
+                      %a{:href => "https://web.whatsapp.com/send?phone=573115412451"} +573115412451
+            .z-index-4.nt-column.col-sm-12.col-lg-4.col-md-7.col-12
+              .spacer.py-4.d-lg-none
+              %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"}
+                We
+                %i.fa.fa-heart{:style => "color: red;"}
+                Engineering
+            .wpb_text_column.wpb_content_element.col-md-12
+              .wpb_wrapper{:style => "display: flex;justify-content: space-between;margin-top: 30px;"}
+                %p
+                  Copyright 2020
+                  %i.fa.fa-copyright
+                  %a.__dev{:href => "#", :rel => "noopener noreferrer", :target => "_blank"} Intertecnicos
+                %p{:style => "margin-top: 0;"}
+                  Desarrollado con
+                  %i.fa.fa-heart
+                  por
+                  %a.__dev{:href => "http://streetopendata.com/", :target => "_blank"} Street Open Data Lab

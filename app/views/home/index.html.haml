@@ -1,0 +1,766 @@
+#app
+  #btn-to-top-wrap
+    %a#btn-to-top.circled{"data-visible-offset" => "800", :href => "javascript:void(0);"}
+  %main
+    .nt-section
+      .container-fluid.pl-0.pr-0
+        .row.no-gutters
+          .nt-column.col-sm-12
+            %header#top-bar.top-bar.top-bar--dark.nt-shortcode-header{"data-nav-anchor" => "true", "data-res-css" => "       #nt-logo.top-bar__logo.site-logo img { width:159px; } #nt-logo.top-bar__logo.site-logo img { height:45px; }  ", :style => "position: fixed;background: #fff;top: 0;padding: 0;"}
+              .top-bar__inner
+                .container-fluid
+                  .row.align-items-center.no-gutters
+                    %a#nt-logo.top-bar__logo.site-logo{:href => "../index.html"}
+                      =image_tag('logo.svg', class: 'img-fluid main-logo', alt:"Intertecnicos", style:  "margin: 20px 0px 14px 25px;")
+                    %a#top-bar__navigation-toggler.top-bar__navigation-toggler{:href => "javascript:void(0);"}
+                      %span
+                    .top-bar__collapse
+                      %nav#top-bar__navigation.top-bar__navigation
+                        %ul
+                          %li
+                            %a.nav-link{:href => "javascript:goTo('home')"} Home
+                          %li
+                            %a.nav-link{:href => "javascript:goTo('about')"} Nosotros
+                          %li
+                            %a.nav-link{:href => "javascript:goTo('services')"} Servicios
+                          %li
+                            %a.nav-link{:href => "javascript:goTo('tell-us')"} Cuentanos
+                          / <li><a class=nav-link href="javascript:goTo('blog')">Blog</a></li>
+                          %li
+                            %a.nav-link{:href => "javascript:goTo('contact')"} Contacto
+                      #top-bar__action.top-bar__action
+                        .d-xl-flex.flex-xl-row.flex-xl-wrap.align-items-xl-center
+                          .top-bar__auth-btns
+                            = link_to "Sign In", new_customer_session_path, :target => " _blank"
+                            %a{:href => "./sedes-personal", :style => "color:tomato;", :target => " _blank"} Covid-19
+                            %a.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "javascript:goTo('contact')"} Escribenos
+                          .top-bar__side-menu-button.js-side-menu-open
+                            %span.line
+                            %span.line
+                            %span.line
+    #home.nt-section{:name => "home"}
+      .container-fluid.pl-0.pr-0
+        .row.no-gutters
+          .nt-column.col-sm-12
+            #start-screen.start-screen.start-screen--full-height.start-screen--style-7{:style => "padding-top: 0px !important; margin-top: 100px !important;"}
+              .start-screen__bg-container
+                .start-screen__bg{ class: 'bg-img-some'}
+              .start-screen__content-container
+                .start-screen__content__item.align-items-center
+                  .container
+                    .row
+                      .col-12.col-md-10.col-lg-6
+                        %h6.__subtitle{:style => "color: #008A78;  "} Un equipo altamente calificado de ingenieros y tècnicos  que hace crecer tu compañía.
+                        %h2
+                          %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial de
+                          %br/
+                          %span.txt-rotate{"data-period" => "1000", "data-rotate" => "[ \"Subestaciones eléctricas en media y baja tensión.\", \" Redes eléctricas de baja y media tensión.\", \"Energías renovables.\"]"}
+                        %p
+                          %strong
+                            %span{:style => "color: #008A78;  "} Intertecnicos
+                          es una compañía especializada en diseño, planeación, gestión y ejecución  de proyectos del sector eléctrico industrial, comercial e residencial.
+                        %hr/
+                        %p
+                          %strong> Nuestra garantía
+                          , un grupo de profesionales altamente calificado comprometido con resolver sus requerimientos de manera eficiente y eficaz.
+                        .spacer.py-2.py-sm-4
+                        %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "javascript:goTo('services')"} Saber mas
+                      .col-12.col-md-10.col-lg-6
+                        .owl-carousel.owl-inicio{:style => "margin-left: 30px;"}
+                          =image_tag 'media-tension.jpg', class: 'img-item item'
+                          =image_tag '1.jpg', class: 'img-item item'
+                          =image_tag '7.jpg', class: 'img-item item'
+                          =image_tag '8.jpg', class: 'img-item item'
+                          =image_tag 'bobina.jpg', class: 'img-item item'
+                          =image_tag 'tester.jpg', class: 'img-item item'
+    #brands.nt-section.section.pb-0
+      .container
+        .row.flex-md-row-reverse
+          .nt-column.col-sm-12
+            %h2.text-center
+              %span Ellos
+              confían
+              %span en nosotros
+            .row.vc_custom_1558361283045.justify-content-sm-around.align-items-center
+              .nt-column.col-6.col-md-3
+                .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278271921.has-opacity
+                  %figure.wpb_wrapper.vc_figure
+                    .vc_single_image-wrapper.vc_box_border_grey
+                      =image_tag 'brands/conalvias.png', class: 'vc_single_image-img'
+              .nt-column.col-6.col-md-3
+                .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278265574.has-opacity
+                  %figure.wpb_wrapper.vc_figure
+                    .vc_single_image-wrapper.vc_box_border_grey
+                      =image_tag 'brands/logo-dromos.png', class: 'vc_single_image-img'
+    #about.nt-section.section{:name => "about"}
+      .container
+        .row
+          .nt-column.col-sm-12.col-lg-6.col-12
+            .section-heading.section-heading--dark
+              %h6.__subtitle{:style => "color:#008A78;  "} Acerca de nosotros
+              %h2.__title
+                Tus proyectos
+                %br/
+                %span En las mejores manos
+            .spacer.py-4
+            .wpb_text_column.wpb_content_element
+              .wpb_wrapper
+                %p
+                  Somos una compañía con  más 15 años en el mercado, ejecutando proyectos por todo el país, ofreciendo soluciones orientadas a cubrir las necesidades de la industria colombiana con la mayor calidad, brindando asesoría 360 grados, soporte técnico y la calidad como nuestra garantía.
+            .nt_btn_6547.mt-9
+              %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "#contact"} Agendar asesoria
+          .nt-column.col-sm-12.col-lg-6.col-12.text-center.text-md-left
+            .spacer.py-5.d-lg-none
+            .video-box.video-box--s2
+              =image_tag 'panel.jpeg'
+    / NEW SERVICES
+    #services.nt-section.section.vc_custom_1564323430175.nt-has-fill.nt_section_158099{"data-res-css" => ".nt_section_158099{background-image: linear-gradient(to right top, #2dae2f, #00a77c, #0099b8, #0085d4, #0069c6);}", :name => "services"}
+      .container
+        %h2.text-center{:style => "color: #fff;"}
+          %span Nuestros
+          Servicios
+          %span
+        .row
+          .col-md-12.col-sm-12.col-md-6
+            %ul.tabs-services
+              %li
+                %a.activeTabL{:href => "#", :idr => "mant"} Mantenimiento
+              %li
+                %a{:href => "#", :idr => "servT"} Técnicos
+              %li
+                %a{:href => "#", :idr => "servI"} Ingeniería
+              %li
+                %a{:href => "#", :idr => "vent"} Materiales eléctricos
+        #mant.row.service-box
+          .nt-column.col-sm-12.col-md-6.col-12
+            .section-heading.section-heading--white
+              %h2.__title
+                %span Servicios de
+                = succeed "Mantenimiento" do
+                  %br/
+              .imageDescription
+                =image_tag 'services/mantenimiento.jpg', class: 'imgService'
+              .__description
+                Ponemos a su disposición toda nuestra amplia experiencia en servicio de mantenimiento, entendiendo y comprometiéndonos con su necesidad de solución a la mayor brevedad.
+            .spacer.py-6
+          .nt-column.col-sm-12.col-md-6.col-12
+            .review.review--s3.review--slider
+              .owl-carousel.owl-services{:style => "padding-top: 76px;"}
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Mantenimiento de instalaciones eléctricas
+                  %p Mantenimiento de instalaciones eléctricas y sistema de alumbrados a edificios, oficinas y conjuntos residenciales.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Mantenimiento preventivo
+                  %p Mantenimiento preventivo, reparación y bobinado de motores y maquinarias eléctricas (motores DC, generadores, transformadores).
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Reparación de tarjetas electrónicas
+                  %p Reparación de tarjetas electrónicas y circuitos integrados.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Mantenimiento de plantas
+                  %p Reparación y mantenimiento de plantas eléctricas, moto-soldadores y herramientas eléctricas.
+        #servT.row.service-box{:style => "display: none;"}
+          .nt-column.col-sm-12.col-md-6.col-12
+            .section-heading.section-heading--white
+              %h2.__title
+                %span Servicios
+                = succeed "T\u{e9}cnicos" do
+                  %br/
+              .imageDescription
+                =image_tag 'services/servicio-tecnico.jpg', class: 'imgService'
+              .__description
+                Ofrecemos nuestro conocimiento en la electricidad a través de nuestro servicio técnico, garantizando la seguridad de las instalaciones e integridad física de los operadores.
+            .spacer.py-6
+          .nt-column.col-sm-12.col-md-6.col-12
+            .review.review--s3.review--slider
+              .owl-carousel.owl-services{:style => "padding-top: 76px;"}
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseño e instalación de tableros
+                  %p Diseño e instalación de tableros generales de acometida, tableros de distribución, tableros de paso, tableros de mando y fuerza.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Realización de instalaciones eléctricas
+                  %p Realización de instalaciones eléctricas y sistema de alumbrados (residencial, comercial, industrial)
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Fabricación de transformadores
+                  %p Fabricación de transformadores en baja tensión y voltajes especiales.Fabricación de transformadores en baja tensión y  voltajes especiales.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Suministro de materiales
+                  %p Suministro de materiales eléctricos y electrónicos.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Venta de motores
+                  %p Venta de motores trifásicos y monofásicos.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseño y ejecución de instalaciones eléctricas
+                  %p Diseño y ejecución de instalaciones eléctricas en bodegas, industria, empresas, de acuerdo a las necesidades específicas y ubicación de la zona de carga.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Cableado estructurado
+                  %p Cableado estructurado voz y datos
+        #servI.row.service-box{:style => "display: none;"}
+          .nt-column.col-sm-12.col-md-6.col-12
+            .section-heading.section-heading--white
+              %h2.__title
+                %span Servicios de
+                = succeed "Ingenier\u{ed}a" do
+                  %br/
+              .imageDescription
+                =image_tag 'services/servicios-de-ingenieria.jpg', class: 'imgService'
+              .__description
+                Realizamos trabajos de ingeniería del sector eléctrico y de automatización industrial, el cual ponemos a sus servicios garantizando una gestión de calidad y sujeta a las normativas y reglamentos que apliquen. Algunos de nuestros son:
+            .spacer.py-6
+          .nt-column.col-sm-12.col-md-6.col-12
+            .review.review--s3.review--slider
+              .owl-carousel.owl-services{:style => "padding-top: 76px;"}
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseño e instalación de líneas eléctricas
+                  %p Diseño e instalación de líneas eléctricas de media y baja tensión.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseño, fabricación e instalación de subestaciones
+                  %p Diseño, fabricación e instalación de subestaciones eléctricas: cuadros, conexiones, bornes, transformadores, fusibles y empalmes eléctricos.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseños de planos eléctricos
+                  %p Diseños de planos eléctricos para cualquier tipo de necesidad (residencial, comercial, industrial).
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseños de planos
+                  %p Diseños de planos P&amp;ID, lógica para PLC.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Diseño y ejecución de sistemas
+                  %p Diseño y ejecución de sistemas de automatización industrial e instrumentación de procesos.
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Estudio de energía
+                  %p Estudio de energía y análisis de redes.
+        #vent.row.service-box{:style => "display: none;"}
+          .nt-column.col-sm-12.col-md-6.col-12
+            .section-heading.section-heading--white
+              %h2.__title
+                %span Venta de
+                = succeed "materiales" do
+                  %br/
+              .imageDescription
+                =image_tag 'services/venta-de-materiales-electricos.jpg', class: 'imgService'
+              .__description
+                Comercializamos motores trifásicos, monofásicos  y materiales eléctricos a todo el país de media y baja tension, iluminacion industrial y residencial, cableado estructurado, lámparas led entre otros productos.
+            .spacer.py-6
+          .nt-column.col-sm-12.col-md-6.col-12
+            .review.review--s3.review--slider
+              .owl-carousel.owl-services{:style => "padding-top: 76px;"}
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Para mayor información llame a nuestra línea de atención
+                  %p
+                    %a{:href => "tel:+34678567876"}
+                      %i.fa.fa-phone
+                      7967490
+                    %br/
+                    o al
+                    %br/
+                    %a{:href => "tel:573115412451"}
+                      %i.fa.fa-whatsapp
+                      +57 3115412451
+                .item.review__item.review__item--rounded.review__item--shadow
+                  .d-table
+                    .d-table-cell.align-middle
+                      %span.review__item__author-name.h5 Escribenos a nuestro correo
+                  %p
+                    %a{:href => "mailto:intertecnicos_ltda@hotmail.com"}
+                      %i.fa.fa-envelope>
+                      intertecnicos_ltda@hotmail.com
+                    %br/
+            %div{:style => "display: flex;justify-content: center;"}
+              %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "javascript:goTo('services')"} Ir a la tienda
+    / NEW SERVICES
+    #flow.nt-section.section{:name => "flow"}
+      .container
+        .row
+          .nt-column.col-sm-12
+            .section-heading.section-heading--center.section-heading--dark
+              %h6.__subtitle{:style => "color: #008A78;  "} Nuestro proceso
+              %h2.__title
+                Porque la industria necesita a los mejores en sus proyectos
+              .__description
+                Bien sabemos por nuestra amplia experiencia que nuestra industria necesita de un arduo compromiso, alto grado de conocimiento y gran servicio
+            .spacer.py-6
+            .row.vc_custom_1560952297838.justify-content-center.justify-content-lg-around
+              .nt-column.col-sm-9.col-lg-3.col-md-3.col-12.d-sm-flex
+                .steps.steps--s1.steps-303
+                  .__item
+                    .mb-md-4
+                      %span.__num
+                        %span.__ico
+                          %i.fontello-ok
+                    %h4.__title Contactanos
+                    %p Necesitas un pedido o cotización,  hacemos envíos de materiales electricos a toda colombia, comunicate con nuestra  líneas de atención  +57 1 7967490  ò  envía un correo a  intertecnicos_ltda@hotmail.com
+              .nt-column.col-sm-9.col-lg-3.col-md-3.col-12.d-sm-flex
+                .steps.steps--s1.steps-309
+                  .__item
+                    .mb-md-4
+                      %span.__num
+                        %span.__ico
+                          %i.fontello-ok
+                    %h4.__title Requerimientos
+                    %p
+                      Si tu proyecto lo necesita concretemos una cita a partir de aquí se puede acordar una reunión en nuestras instalaciones
+                      o remitir un profesional a tus instalaciones.
+              .nt-column.col-sm-9.col-lg-3.col-md-3.col-12.d-sm-flex
+                .steps.steps--s1.steps-704
+                  .__item
+                    .mb-md-4
+                      %span.__num
+                        %span.__ico
+                          %i.fontello-ok
+                    %h4.__title Iniciemos
+                    %p Diseñamos, trabajamos y verificamos cuales son las mejores técnicas para hacer el mejor proyecto.
+              .nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
+                %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "tel:+573115412451"}
+                  Llamar ahora
+    #tell-us.nt-section.section.vc_custom_1558746900193.nt-has-fill.section--bg-img{:name => "tell-us"}
+      .container
+        .row
+          .nt-column.col-sm-12
+            .section-heading.section-heading--center.section-heading--dark
+              %h6.__subtitle{:style => "color: #008A78;  "} Amigables con la industria
+              %h2.__title
+                Recogemos a domicilio tus equipos
+                %span o enviamos un tècnico
+              .__description
+                Revisamos, reparamos y entregamos de nuevo en tus instalaciones todo a un solo click, servicio especial para bobinado de
+                motores eléctricos.
+            .spacer.py-6
+            .row{:style => "margin-bottom: 4vh;"}
+              .nt-column.col-sm-12.text-center
+                %h3{:style => "border-bottom: 2px solid #2DAE2F; display: inline; padding: 1vh !important;line-height: 2;"}
+                  ¡Esl mejor servicio a un solo Click!
+            .row.vc_custom_1557876297396.justify-content-md-start.justify-content-sm-center
+              .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
+                .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-948.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
+                  =image_tag 'one.svg',style: "max-width: 40%;"
+                  .__body.pt-8.pb-9
+                    %p Recogemos los equipos o enviamos uno de nuestros técnicos en la fecha agendada y dirección indicada
+              .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
+                .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-569.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
+                  =image_tag 'two.svg',style: "max-width: 40%;"
+                  .__body.pt-8.pb-9
+                    %p Hacemos una revisión detallada y te entregamos un informe del estado del mismo.
+              .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
+                .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-248.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
+                  =image_tag 'three.svg',style: "max-width: 40%;"
+                  .__body.pt-8.pb-9
+                    %p Posterior a tu aprobación realizamos la reparación o mantenimiento a tus equipos
+              .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
+                .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-248.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
+                  =image_tag 'four.svg',style: "max-width: 40%;"
+                  .__body.pt-8.pb-9
+                    %p Entregamos en tus instalaciones!
+              .nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
+                %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "#contact"}
+                  Agenda tu servicio
+              .row
+                .nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
+                  .progress
+                    .progress-bar
+    /
+      <div id=blog name="blog" class="nt-section section pb-0">
+      <div class=container>
+      <div class="row ">
+      <div class="nt-column col-sm-12">
+      <div class="section-heading  section-heading--center section-heading--dark ">
+      <h6 class="__subtitle" style="color: #008A78;  ">Blog & Noticias</h6>
+      <h2 class="__title">Blog</h2>
+      <div class=__description>Consúltenos en Medium para leer artículos interesantes sobre tecnología,ingenieria, negocios y finanzas.</div>
+      </div>
+      <div class="spacer py-6"></div>
+      <div class="posts posts--s2">
+      <div class=__inner>
+      <div class=row>
+      <div
+      class="col-12 col-sm-6 col-lg-4 nt-post  post-974 post type-post status-publish format-standard has-post-thumbnail hentry category-abstract tag-cloud tag-envato tag-free tag-program tag-responsive tag-strategy tag-theme  nt-post-class ">
+      <div class="__item __item--preview">
+      <div class=__header>
+      <figure class=__image><img style="height: 100%;"
+      src="./assets/img/posts/rails.jpg" alt=blog_s_4_1.jpg>
+      </figure>
+      </div>
+      <div class=__body>
+      <div class=__content>
+      <div class=post-meta><span
+      class=post-meta__item>PROGRAMMING</span>
+      </div>
+      <h4 class="__title"><a
+      href="https://medium.com/bit-concept/enum-method-in-ruby-on-rails-e22084883f6f"
+      title="Dijkstra in a Nutshel">Enum method in Ruby on
+      Rails</a></h4>
+      Enumerize gem was written by Sergey Nartimov as a new way to
+      handle specific attributes in a database column...
+      <p><a class=__more-link
+      href="https://medium.com/bit-concept/enum-method-in-ruby-on-rails-e22084883f6f"
+      title="Dijkstra in a Nutshell">Read
+      more</a></p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div
+      class="col-12 col-sm-6 col-lg-4 nt-post  post-971 post type-post status-publish format-standard has-post-thumbnail hentry category-abstract tag-cloud tag-envato tag-free tag-program tag-responsive tag-strategy tag-theme tag-wordpress  nt-post-class ">
+      <div class="__item __item--preview">
+      <div class=__header>
+      <figure class=__image><img style="height: 100%;"
+      src="./assets/img/posts/tree.jpg" alt=blog_s_4_7.jpg>
+      </figure>
+      </div>
+      <div class=__body>
+      <div class=__content>
+      <div class=post-meta><span
+      class=post-meta__item>ALGORITHM</span>
+      </div>
+      <h4 class="__title"><a
+      href="https://medium.com/bit-concept/dijkstra-in-a-nutshell-c2b2d21d1955"
+      title="Dijkstra in a Nutshell">Dijkstra in a
+      Nutshell</a></h4>
+      Dijkstra’s algorithm is an algorithm for finding the shortest
+      paths between nodes in a graph, which may represent, for
+      example, road networks...
+      <p><a class=__more-link
+      href="https://medium.com/bit-concept/dijkstra-in-a-nutshell-c2b2d21d1955"
+      title="Tripod fish grunt mackerel vendace surfperch">Read
+      more</a></p>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div
+      class="col-12 col-sm-6 col-lg-4 nt-post  post-968 post type-post status-publish format-standard has-post-thumbnail hentry category-abstract tag-cloud tag-envato tag-free tag-program tag-responsive tag-strategy tag-theme tag-wordpress  nt-post-class ">
+      <div class="__item __item--preview">
+      <div class=__header>
+      <figure class=__image><img style="height: 100%;"
+      src="./assets/img/posts/hacking.jpg" alt=blog_s_4_6.jpg>
+      </figure>
+      </div>
+      <div class=__body>
+      <div class=__content>
+      <div class=post-meta><span class=post-meta__item>HACKING</span>
+      </div>
+      <h4 class="__title"><a
+      href="https://medium.com/bit-concept/phishing-in-buffalo-usa-how-they-can-steal-your-money-easily-e2b996cf2102"
+      title="Redfin perch tripod fish zebra lionfish">Phishing
+      in Buffalo: Hacking stories</a></h4>
+      As you seen this attack is oriented to final-users, pitifully,
+      there are people who still trust in everything on the Internet.
+      They think they are capable to earn a million dollar just
+      clicking an advertisement...
+      <p><a class=__more-link
+      href="https://medium.com/bit-concept/phishing-in-buffalo-usa-how-they-can-steal-your-money-easily-e2b996cf2102"
+      title="Redfin perch tripod fish zebra lionfish">Read
+      more</a></p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    #contact.nt-section.section{:name => "blog", :style => "", :class => 'bg-img-algo' }
+      .container
+        .row.justify-content-lg-between.align-items-md-center
+          .nt-column.col-sm-12.col-lg-5.col-md-7.col-12
+            .start-screen__content-form.js-contact-form
+              %h6.__subtitle{:style => "color: #008A78;  "} Contactanos
+              %h3 Nuestro propósito es establecer un canal de comunicación claro y efectivo con nuestros clientes
+              %p.mb-6 Por eso ponemos a su disposición canales  de Contacto a través de los cuales brindamos atención personalizada técnica y comercial.
+              %ul{:style => "margin-bottom: 35px;"}
+                %li
+                  %a.contact-info{:href => "mailto:info@intertecnicos.com", :target => "_blank"}
+                    %i.fa.fa-envelope{:style => "margin-right: 18px;font-size: 20px;align-self: center;;"}
+                    info@intertecnicos.com
+                %li
+                  %a.contact-info{:href => "https://web.whatsapp.com/send?phone=573115412451", :target => "_blank"}
+                    %i.fa.fa-whatsapp{:style => "margin-right: 18px;font-size: 20px;align-self: center;;"}
+                    +573115412451
+              #wpcf7-f563-p1468-o1.wpcf7{:dir => "ltr", :lang => "en-US", :role => "form"}
+                .screen-reader-response
+                %form#frmSm.wpcf7-form{:action => "#", :method => "post", :novalidate => "novalidate"}
+                  %div{:style => "display: none;"}
+                    %input{:name => "_wpcf7", :type => "hidden", :value => "563"}/
+                    %input{:name => "_wpcf7_version", :type => "hidden", :value => "5.1.6"}/
+                    %input{:name => "_wpcf7_locale", :type => "hidden", :value => "en_US"}/
+                    %input{:name => "_wpcf7_unit_tag", :type => "hidden", :value => "wpcf7-f563-p1468-o1"}/
+                    %input{:name => "_wpcf7_container_post", :type => "hidden", :value => "1468"}/
+                  .input-wrp
+                    %span.wpcf7-form-control-wrap.text-74
+                      %input#compInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Compañía", :size => "40", :type => "text", :value => ""}/
+                  .input-wrp
+                    %span.wpcf7-form-control-wrap.text-74
+                      %input#nomInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Nombre completo", :size => "40", :type => "text", :value => ""}/
+                  .input-wrp
+                    %span.wpcf7-form-control-wrap.email-362
+                      %input#emailInp.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "email-362", :placeholder => "Email  corporativo", :size => "40", :type => "email", :value => ""}/
+                  .input-wrp
+                    %span.wpcf7-form-control-wrap.text-74
+                      %input#phoneInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Número de celular.", :size => "40", :type => "text", :value => ""}/
+                  .input-wrp
+                    %span.wpcf7-form-control-wrap.text-74
+                      %textarea#messInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "¿Cómo te podemos ayudar?", :size => "40", :type => "text", :value => ""}
+                  %p
+                    %input.wpcf7-form-control.wpcf7-submit.custom-btn.custom-btn--medium.custom-btn--style-1.wide{:type => "submit", :value => "Enviar"}/
+                    %span.ajax-loader
+                  .wpcf7-response-output.wpcf7-display-none
+          .nt-column.col-sm-12.col-lg-6.col-md-5.col-12
+            .spacer.py-5.d-md-none
+            /
+              <figure class="image-container js-tilt" data-tilt-speed=600 data-tilt-max=15
+              data-tilt-perspective=700><img class=img-fluid width=571 height=490
+              src="./assets/img/Mapamundi-01.png"
+              alt=demo></figure>
+    #footer-widgetarea.nt-section.pt-60.pb-75.footer.footer--s4.footer--color-light.vc_custom_1558951260637.nt-has-fill
+      .container
+        .row
+          .z-index-2.nt-column.col-sm-12.col-lg-4.col-md-8.col-12
+            .wpb_single_image.wpb_content_element.vc_align_left
+              %figure.wpb_wrapper.vc_figure
+                .vc_single_image-wrapper.vc_box_border_grey
+                  =image_tag 'logo_white.png', class: 'vc_single_image-img'
+            .spacer.py-4
+            .s-btns.s-btns--md.s-btns--light.s-btns--rounded
+              %ul.d-flex.flex-row.flex-wrap.align-items-center.justify-content-lg-start
+                %li.social-media
+                  %a.f{:href => "#"}
+                    %i.fontello-facebook
+                %li.social-media
+                  %a.y{:href => "#"}
+                    %i.fontello-linkedin
+                %li.social-media
+                  %a.i{:href => "#"}
+                    %i.fontello-instagram
+          .z-index-3.nt-column.col-sm-12.col-lg-4.col-md-5.col-12
+            .spacer.py-4.d-lg-none
+            %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"} Contacto
+            .wpb_text_column.wpb_content_element.vc_custom_1559258220252
+              .wpb_wrapper
+                %address.footer__address.footer__address--s2
+                %ul
+                  %li
+                    %i.__ico.fontello-location>
+                    Carrera 74b 64f-20, Bogotá
+                  %li
+                    %i.__ico.fontello-mail-1
+                    %a{:href => "mailto:info@intertecnicos.com"}
+                      %span.__cf_email__ info@intertecnicos.com
+                  %li
+                    %i.__ico.fontello-phone
+                    %a{:href => "https://web.whatsapp.com/send?phone=573115412451"} +573115412451
+          .z-index-4.nt-column.col-sm-12.col-lg-4.col-md-7.col-12
+            .spacer.py-4.d-lg-none
+            %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"}
+              We
+              %i.fa.fa-heart{:style => "color: red;"}
+              Engineering
+          .wpb_text_column.wpb_content_element.col-md-12
+            .wpb_wrapper{:style => "display: flex;justify-content: space-between;margin-top: 30px;"}
+              %p
+                Copyright 2020
+                %i.fa.fa-copyright
+                %a.__dev{:href => "#", :rel => "noopener noreferrer", :target => "_blank"} Intertecnicos
+              %p{:style => "margin-top: 0;"}
+                Desarrollado con
+                %i.fa.fa-heart
+                por
+                %a.__dev{:href => "http://streetopendata.com/", :target => "_blank"} Street Open Data Lab
+
+
+
+:javascript
+
+    var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+
+    $(document).ready(function(){
+
+        $('.owl-services').owlCarousel({
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 2
+                }
+            }
+        });
+
+        $('.owl-inicio').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+
+
+        $('#frmSm').submit(function(e){
+            e.preventDefault()
+            var data = {
+                service_id: 'smtp_server',
+                template_id: 'template_AHHlzOkW',
+                user_id: 'user_JihHQvk8CoDaJ8e0xdYja',
+                template_params: {
+                    "from_name": $('#nomInp').val(),
+                        "compain": $('#compInp').val(),
+                        "phone": $('#phoneInp').val(),
+                        "from_email": $('#emailInp').val(),
+                        "message_html": $('#messInp').val()
+                }
+
+            };
+
+            $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                type: 'POST',
+                data: JSON.stringify(data),
+                contentType: 'application/json'
+            }).done(function() {
+                Swal.fire(
+                    '¡Listo!',
+                    'Tu mensaje ha sido entregado',
+                    'success'
+                    )
+
+                $('input[type=text],input[type=email], textarea').val('')
+
+            }).fail(function(error) {
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: JSON.stringify(error),
+                    })
+
+
+            });
+        })
+
+        $('.tabs-services').on('click', 'a', function(e){
+          e.preventDefault()
+          var idr = $(this).attr('idr')
+          $('.service-box').fadeOut()
+          $('.tabs-services li a').removeClass('activeTabL')
+          $(this).addClass('activeTabL')
+          $('#'+idr).fadeIn()
+        })
+
+
+    })
+
+
+
+      function goTo(id){
+          $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+      }
