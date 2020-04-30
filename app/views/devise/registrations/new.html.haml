@@ -1,0 +1,27 @@
+= render 'layouts/header_clean'
+%div.text-center{style: "margin-top: 80px; background: #f3f3f3; padding: 50px 0;"}
+  .row
+    .col-md-3.col-sm-0
+    .col-md-6.col-sm-12
+      .start-screen__content-form.js-contact-form
+        %h2 Registro
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'row'}) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field.col-md-12
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', placeholder: 'Email'
+            %br/
+          .field.col-md-6
+            - if @minimum_password_length
+              %em
+                (minimo #{@minimum_password_length} caracteres)
+            = f.password_field :password, autocomplete: "new-password", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', placeholder: 'Contraseña'
+          .field.col-md-6            
+            %em
+              (Las contraseñas deben coincidir)
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', placeholder: 'Confirmar contraseña'
+          .actions.col-md-12
+            %br/
+            = f.submit "Registrar", class: ' custom-btn custom-btn--big custom-btn--style-1'
+        = render "devise/shared/links"
+    .col-md-3.col-sm-0
+= render 'layouts/footer'

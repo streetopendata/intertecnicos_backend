@@ -1,0 +1,24 @@
+= render 'layouts/header_clean'
+%div.text-center{style: "margin-top: 80px; background: #f3f3f3; padding: 50px 0;"}
+  .row
+    .col-md-3.col-sm-0
+    .col-md-6.col-sm-12
+      .start-screen__content-form.js-contact-form
+        %h2 Login
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field.col-md-12
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', placeholder: 'Email'
+            %br/
+          .field.col-md-12
+            = f.password_field :password, autocomplete: "current-password", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', placeholder: 'Contraseña'
+            - if devise_mapping.rememberable?
+              .field
+                = f.check_box :remember_me
+                = f.label :remember_me
+          .actions.col-md-12
+            %br/
+            = f.submit "Ingresar", class: ' custom-btn custom-btn--big custom-btn--style-1'
+        = render "devise/shared/links"
+    .col-md-3.col-sm-0
+= render 'layouts/footer'

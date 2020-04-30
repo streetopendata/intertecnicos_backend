@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'sedes-personal', to: 'home#sedes'
+  get 'personal(.:format)', to: 'devise/registrations#new'
 
   get 'home/download_intertecnicos'
   get 'home/download_file'
+
 
 
 end

@@ -1,0 +1,14 @@
+.nt-section
+  .container-fluid.pl-0.pr-0
+    .row.no-gutters
+      .nt-column.col-sm-12
+        %header#top-bar.top-bar.top-bar--dark.nt-shortcode-header{"data-nav-anchor" => "true", "data-res-css" => "       #nt-logo.top-bar__logo.site-logo img { width:159px; } #nt-logo.top-bar__logo.site-logo img { height:45px; }  ", :style => "position: fixed;background: #fff;top: 0;padding: 0;"}
+          .top-bar__inner
+            .container-fluid
+              .row.align-items-center.no-gutters
+                %a#nt-logo.top-bar__logo.site-logo{:href => "../index.html"}
+                  =image_tag 'logo.svg', class: 'img-fluid main-logo', style: "margin: 20px 0px 14px 25px;"
+                %a#top-bar__navigation-toggler.top-bar__navigation-toggler{:href => "javascript:void(0);"}
+                  %span
+                .top-bar__collapse
+                  %nav#top-bar__navigation.top-bar__navigation
