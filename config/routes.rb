@@ -7,9 +7,15 @@ Rails.application.routes.draw do
   get 'sedes-personal', to: 'home#sedes'
   get 'personal(.:format)', to: 'devise/registrations#new'
 
+  get 'store', to: 'store#index'
+  get 'workers', to: 'workers#index'  
+
   get 'home/download_intertecnicos'
   get 'home/download_file'
 
 
+  namespace :user do
+    root :to => "welcome#index"
+  end
 
 end

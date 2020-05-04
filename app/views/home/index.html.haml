@@ -31,7 +31,12 @@
                       #top-bar__action.top-bar__action
                         .d-xl-flex.flex-xl-row.flex-xl-wrap.align-items-xl-center
                           .top-bar__auth-btns
-                            = link_to "Sign In", new_customer_session_path, :target => " _blank"
+                            - if customer_signed_in?
+                              = link_to 'Salir', destroy_customer_session_path , method: :delete , class: 'button button-lite', style: 'align-self: center; margin: 0;'
+                            - else
+                              = link_to "Sign In", new_customer_session_path, :target => " _blank"
+                            - if !customer_signed_in?
+                              = link_to 'Registrarme', new_customer_registration_path , class: 'button button-invert button-lite', style: 'align-self: center; margin: 0;'                            
                             %a{:href => "./sedes-personal", :style => "color:tomato;", :target => " _blank"} Covid-19
                             %a.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "javascript:goTo('contact')"} Escribenos
                           .top-bar__side-menu-button.js-side-menu-open
