@@ -8,11 +8,15 @@ Rails.application.routes.draw do
   get 'personal(.:format)', to: 'devise/registrations#new'
 
   get 'store', to: 'store#index'
-  get 'workers', to: 'workers#index'  
+  get 'workers', to: 'workers#index'
 
   get 'home/download_intertecnicos'
   get 'home/download_file'
 
+
+  resources :admins do
+    resources :workers
+  end
 
   namespace :user do
     root :to => "welcome#index"

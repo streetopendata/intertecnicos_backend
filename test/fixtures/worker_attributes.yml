@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_com: MyString
+  sede: MyString
+  tip_doc: MyString
+  tel_con: MyString
+  sexo: MyString
+  address: MyString
+  localidad: MyString
+  zone: MyString
+  bicicleta: false
+  automovil: false
+  moto: false
+  taxi: false
+  walk: false
+  n_peo_worker: 1
+  n_peo_old: 1
+  n_peo_young: 1
+  dis_diabetes: false
+  dis_cardio: false
+  dis_hypertension: false
+  dis_acv: false
+  dis_inmunosuopressant: false
+  dis_obs_cronic: false
+  dis_malnutrition: false
+  dis_smoker: false
+  admin: one
+
+two:
+  nom_com: MyString
+  sede: MyString
+  tip_doc: MyString
+  tel_con: MyString
+  sexo: MyString
+  address: MyString
+  localidad: MyString
+  zone: MyString
+  bicicleta: false
+  automovil: false
+  moto: false
+  taxi: false
+  walk: false
+  n_peo_worker: 1
+  n_peo_old: 1
+  n_peo_young: 1
+  dis_diabetes: false
+  dis_cardio: false
+  dis_hypertension: false
+  dis_acv: false
+  dis_inmunosuopressant: false
+  dis_obs_cronic: false
+  dis_malnutrition: false
+  dis_smoker: false
+  admin: two

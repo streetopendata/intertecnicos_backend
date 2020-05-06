@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_29_172659) do
+ActiveRecord::Schema.define(version: 2020_05_05_230425) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,6 +37,68 @@ ActiveRecord::Schema.define(version: 2020_04_29_172659) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_customers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+  end
+
+  create_table "worker_attributes", force: :cascade do |t|
+    t.string "nom_com"
+    t.string "sede"
+    t.string "tip_doc"
+    t.string "tel_con"
+    t.string "sexo"
+    t.string "address"
+    t.string "localidad"
+    t.string "zone"
+    t.boolean "bicicleta"
+    t.boolean "automovil"
+    t.boolean "moto"
+    t.boolean "taxi"
+    t.boolean "walk"
+    t.integer "n_peo_worker"
+    t.integer "n_peo_old"
+    t.integer "n_peo_young"
+    t.boolean "dis_diabetes"
+    t.boolean "dis_cardio"
+    t.boolean "dis_hypertension"
+    t.boolean "dis_acv"
+    t.boolean "dis_inmunosuopressant"
+    t.boolean "dis_obs_cronic"
+    t.boolean "dis_malnutrition"
+    t.boolean "dis_smoker"
+    t.integer "admin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_worker_attributes_on_admin_id"
+  end
+
+  create_table "workers", force: :cascade do |t|
+    t.string "nom_com"
+    t.string "sede"
+    t.string "tip_doc"
+    t.string "tel_con"
+    t.string "sexo"
+    t.string "address"
+    t.string "localidad"
+    t.string "zone"
+    t.boolean "bicicleta"
+    t.boolean "automovil"
+    t.boolean "moto"
+    t.boolean "taxi"
+    t.boolean "walk"
+    t.integer "n_peo_worker"
+    t.integer "n_peo_old"
+    t.integer "n_peo_young"
+    t.boolean "dis_diabetes"
+    t.boolean "dis_cardio"
+    t.boolean "dis_hypertension"
+    t.boolean "dis_acv"
+    t.boolean "dis_inmunosuopressant"
+    t.boolean "dis_obs_cronic"
+    t.boolean "dis_malnutrition"
+    t.boolean "dis_smoker"
+    t.integer "admin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_workers_on_admin_id"
   end
 
 end

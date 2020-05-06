@@ -4,5 +4,7 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :worker_attributes
+
   enum role: %i[worker superadmin]
 end
