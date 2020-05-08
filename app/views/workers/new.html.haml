@@ -1,116 +1,89 @@
-%h1= @worker.email
-%div
-  = form_for :worker_attributes do |f|
-    %p
-      %br/
-      #{f.label :nom_com}
-      #{f.text_field :nom_com}
-      %br/
-      #{f.label :sede}
-      #{f.text_field :sede}
-      %br/
-      #{f.label :tip_doc}
-      #{f.text_field :tip_doc}
-      %br/
-      #{f.label :tel_con}
-      #{f.text_field :tel_con}
-      %br/
-      #{f.label :sexo}
-      #{f.text_field :sexo}
-      %br/
-      #{f.label :address}
-      #{f.text_field :address}
-      %br/
-      #{f.label :localidad}
-      #{f.text_field :localidad}
-      %br/
-      #{f.label :zone}
-      #{f.text_field :zone}
-      %br/
-      #{f.label :bicicleta}
-      #{f.radio_button :bicicleta, 'Bicicleta'}
-      #{f.label :bicicleta, 'Si', :value => '1'}
-      #{f.radio_button :bicicleta, 'sms'}
-      #{f.label :bicicleta, 'No', :value => '0'}
-      %br/
-      #{f.label :automovil}
-      #{f.radio_button :automovil, 'Automovil'}
-      #{f.label :automovil, 'Si', :value => '1'}
-      #{f.radio_button :automovil, 'sms'}
-      #{f.label :automovil, 'No', :value => '0'}
-      %br/
-      #{f.label :moto}
-      #{f.radio_button :moto, 'Moto'}
-      #{f.label :moto, 'Si', :value => '1'}
-      #{f.radio_button :moto, 'sms'}
-      #{f.label :moto, 'No', :value => '0'}
-      %br/
-      #{f.label :taxi}
-      #{f.radio_button :taxi, 'Taxi'}
-      #{f.label :taxi, 'Si', :value => '1'}
-      #{f.radio_button :taxi, 'sms'}
-      #{f.label :taxi, 'No', :value => '0'}
-      %br/
-      #{f.label :walk}
-      #{f.radio_button :walk, 'Caminar'}
-      #{f.label :walk, 'Si', :value => '1'}
-      #{f.radio_button :walk, 'sms'}
-      #{f.label :walk, 'No', :value => '0'}
-      %br/
-      #{f.label :n_peo_worker}
-      #{f.text_field :n_peo_worker}
-      %br/
-      #{f.label :n_peo_old}
-      #{f.text_field :n_peo_old}
-      %br/
-      #{f.label :n_peo_young}
-      #{f.text_field :n_peo_young}
-      %br/
-      #{f.label :dis_diabetes}
-      #{f.radio_button :dis_diabetes, 'Caminar'}
-      #{f.label :dis_diabetes, 'Si', :value => '1'}
-      #{f.radio_button :dis_diabetes, 'sms'}
-      #{f.label :dis_diabetes, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_cardio}
-      #{f.radio_button :dis_cardio, 'Caminar'}
-      #{f.label :dis_cardio, 'Si', :value => '1'}
-      #{f.radio_button :dis_cardio, 'sms'}
-      #{f.label :dis_cardio, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_hypertension}
-      #{f.radio_button :dis_hypertension, 'Caminar'}
-      #{f.label :dis_hypertension, 'Si', :value => '1'}
-      #{f.radio_button :dis_hypertension, 'sms'}
-      #{f.label :dis_hypertension, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_acv}
-      #{f.radio_button :dis_acv, 'Caminar'}
-      #{f.label :dis_acv, 'Si', :value => '1'}
-      #{f.radio_button :dis_acv, 'sms'}
-      #{f.label :dis_acv, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_inmunosuopressant}
-      #{f.radio_button :dis_inmunosuopressant, 'Caminar'}
-      #{f.label :dis_inmunosuopressant, 'Si', :value => '1'}
-      #{f.radio_button :dis_inmunosuopressant, 'sms'}
-      #{f.label :dis_inmunosuopressant, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_obs_cronic}
-      #{f.radio_button :dis_obs_cronic, 'Caminar'}
-      #{f.label :dis_obs_cronic, 'Si', :value => '1'}
-      #{f.radio_button :dis_obs_cronic, 'sms'}
-      #{f.label :dis_obs_cronic, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_malnutrition}
-      #{f.radio_button :dis_malnutrition, 'Caminar'}
-      #{f.label :dis_malnutrition, 'Si', :value => '1'}
-      #{f.radio_button :dis_malnutrition, 'sms'}
-      #{f.label :dis_malnutrition, 'No', :value => '0'}
-      %br/
-      #{f.label :dis_smoker}
-      #{f.radio_button :dis_smoker, 'Caminar'}
-      #{f.label :dis_smoker, 'Si', :value => '1'}
-      #{f.radio_button :dis_smoker, 'sms'}
-      #{f.label :dis_smoker, 'No', :value => '0'}
-      = f.submit
+= render 'layouts/header_clean'
+%div.text-center{style: "margin-top: 80px; background: #f3f3f3; padding: 50px 0;"}
+  .row
+    .col-md-3.col-sm-0
+    .col-md-6.col-sm-12
+      .start-screen__content-form.js-contact-form
+        %h2= @worker.email
+        %div
+          = form_for :worker_attributes, :html => {:class => 'row'} do |f|
+            .col-md-12{style:"margin-bottom: 10px;"}
+              %h3 Datos personales
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :nom_com, placeholder: "Nombre Completo", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :sede, placeholder: "Sede", readonly: 'readonly', value: 'Carrera 74 B    64 F 20  ', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-2{style:"margin-bottom: 10px;"}
+              = f.text_field :tip_doc, placeholder: 'Tipo de documento', value: 'CC', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-10{style:"margin-bottom: 10px;"}
+              = f.text_field :num_doc, placeholder: '# de documento', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :tel_con, placeholder: 'Telefono', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :sexo, placeholder: 'Sexo', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :address, placeholder: 'Dirección completa', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :localidad, placeholder: 'Localidad', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :zone, placeholder: 'Barrio de residencia', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              %h3 Datos extra personales
+            .col-md-12{style:"margin-bottom: 10px;"}
+              %h4 Metodo de transporte
+              .col-md-12{style: "display: flex;justify-content: center;"}
+                .it
+                  = f.label :bicicleta
+                  = f.check_box :bicicleta
+                .it
+                  = f.label :automovil
+                  = f.check_box :automovil
+                .it
+                  =f.label :moto
+                  = f.check_box :moto
+                .it
+                  =f.label :taxi
+                  = f.check_box :taxi
+                .it
+                  =f.label 'Caminar'
+                  = f.check_box :walk
+            .col-md-12{style:"margin-bottom: 10px;"}
+              = f.text_field :n_peo_worker, placeholder: '¿Cuál es el número total de personas que viven con usted?', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-6.col-sm-12{style:"margin-bottom: 10px;"}
+              = f.label '¿De las personas que viven con usted cuántas son mayores de 60 años?'
+              = f.text_field :n_peo_old, placeholder: 'Ej. 2', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-6.col-sm-12{style:"margin-bottom: 10px;"}
+              = f.label '¿De las personas que viven con usted cuántas son menores de 60 años?'
+              = f.text_field :n_peo_young, placeholder: 'Ej. 1', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+            .col-md-12{style:"margin-bottom: 10px;"}
+              %h4 ¿Cuántas personas con condiciones de morbilidad preexistente viven con el empleado?
+            .col-md-12{style:"margin-bottom: 10px;"}
+              .col-md-12{style: "display: flex;flex-wrap: wrap; justify-content:end;"}
+                .it{style: 'display: flex;'}
+                  = f.label 'Diabetes', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_diabetes, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'Enfermedades cardiovasculares', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_cardio, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'Hipertensión arterial- HTA', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_hypertension, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'ACV,  Accidente Cerebrovascular', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_acv, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'Enfermedades inmunosupresoras', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_inmunosuopressant, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'Enfermedad Obstructiva crónica -EPOC', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_obs_cronic, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'Malnutrición (obesidad y desnutrición)', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_malnutrition, placeholder: 'Ej: 0', value: 0
+                .it{style: 'display: flex;'}
+                  = f.label 'Fumadores', :style => 'margin-right: 10px;'
+                  = f.text_field :dis_smoker, placeholder: 'Ej: 0', value: 0
+            .col-md-12
+              = f.submit "Guardar", class: ' custom-btn custom-btn--big custom-btn--style-1'
+    .col-md-3.col-sm-0
+= render 'layouts/footer'
