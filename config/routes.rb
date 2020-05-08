@@ -22,4 +22,13 @@ Rails.application.routes.draw do
     root :to => "welcome#index"
   end
 
+  direct :homepage do
+    "https://intertecnicos.com/"
+  end
+
+  direct :homepage_worker do
+    "https://intertecnicos.com/workers"
+  end
+
+
 end

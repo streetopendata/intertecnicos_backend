@@ -5,17 +5,17 @@
     .col-md-6.col-sm-12
       .start-screen__content-form.js-contact-form
         %h2= @worker.email
-        %div
-          = form_for :worker_attributes, :html => {:class => 'row'} do |f|
+        %divq
+          = form_for :worker_attributes, :url => {:action => :create}, :method => "post", :html => {:class => 'row'} do |f|
             .col-md-12{style:"margin-bottom: 10px;"}
               %h3 Datos personales
             .col-md-12{style:"margin-bottom: 10px;"}
               = f.text_field :nom_com, placeholder: "Nombre Completo", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
             .col-md-12{style:"margin-bottom: 10px;"}
               = f.text_field :sede, placeholder: "Sede", readonly: 'readonly', value: 'Carrera 74 B    64 F 20  ', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
-            .col-md-2{style:"margin-bottom: 10px;"}
+            .col-md-3{style:"margin-bottom: 10px;"}
               = f.text_field :tip_doc, placeholder: 'Tipo de documento', value: 'CC', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
-            .col-md-10{style:"margin-bottom: 10px;"}
+            .col-md-9{style:"margin-bottom: 10px;"}
               = f.text_field :num_doc, placeholder: '# de documento', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
             .col-md-12{style:"margin-bottom: 10px;"}
               = f.text_field :tel_con, placeholder: 'Telefono', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
