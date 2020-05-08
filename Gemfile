@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'pry'
 
+gem 'execjs'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -28,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
