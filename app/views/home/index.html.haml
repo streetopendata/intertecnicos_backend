@@ -10,7 +10,7 @@
               .top-bar__inner
                 .container-fluid
                   .row.align-items-center.no-gutters
-                    %a#nt-logo.top-bar__logo.site-logo{:href => "../index.html"}
+                    %a#nt-logo.top-bar__logo.site-logo{:href => root_url}
                       =image_tag('logo.svg', class: 'img-fluid main-logo', alt:"Intertecnicos", style:  "margin: 20px 0px 14px 25px;")
                     %a#top-bar__navigation-toggler.top-bar__navigation-toggler{:href => "javascript:void(0);"}
                       %span
@@ -32,11 +32,10 @@
                         .d-xl-flex.flex-xl-row.flex-xl-wrap.align-items-xl-center
                           .top-bar__auth-btns
                             - if customer_signed_in?
-                              = link_to 'Salir', destroy_customer_session_path , method: :delete , class: 'button button-lite', style: 'align-self: center; margin: 0;'
+                              = link_to "Ir a la tienda", store_path
+                              = link_to 'Salir', destroy_customer_session_path , method: :delete , style: 'align-self: center;'
                             - else
-                              = link_to "Sign In", new_customer_session_path, :target => " _blank"
-                            - if !customer_signed_in?
-                              = link_to 'Registrarme', new_customer_registration_path , class: 'button button-invert button-lite', style: 'align-self: center; margin: 0;'                            
+                              = link_to "Ir a la tienda", new_customer_session_path, :target => " _blank"
                             %a{:href => "./sedes-personal", :style => "color:tomato;", :target => " _blank"} Covid-19
                             %a.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "javascript:goTo('contact')"} Escribenos
                           .top-bar__side-menu-button.js-side-menu-open
