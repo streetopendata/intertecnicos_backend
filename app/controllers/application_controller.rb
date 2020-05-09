@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
       if resource.role == 'Admin'
         admins_path
       else
-        homepage_worker_url
-        # workers_path
+        # homepage_worker_url
+        workers_path
       end
     end
   end

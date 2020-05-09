@@ -4,6 +4,7 @@ class WorkersController < ApplicationController
        redirect_to new_admin_worker_url(current_admin.id)
     end
   end
+
   def new
     @worker = Admin.find(params[:admin_id])
   end
