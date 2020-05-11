@@ -1,0 +1,20 @@
+.alert-container
+  %div.contt{class: "#{!notice && !alert ? 'hide' : ''}"}
+    - if  notice || alert
+      %p.notice= notice
+      %p.alert= alert
+
+
+:css
+  .contt {
+      background: linear-gradient(to right top, #2dae2f, #00a77c, #0099b8, #0085d4, #0069c6);
+      padding: 6px 2vw 0 2vw;
+      display: flex;
+      position: relative;
+      color: #fff;
+
+  }
+
+  .hide{
+    display: none;
+  }
