@@ -1,2 +1,41 @@
 = render 'layouts/header_clean'
-%h1 Hola Worker 😁
+%div.text-center{style: "margin-top: 80px; background: #f3f3f3; padding: 50px 0;"}
+  .row
+    .col-md-1.col-sm-0
+    .col-md-10.col-sm-12
+      .start-screen__content-form.js-contact-form.row
+        .col-md-12.col-sm-12
+          - if admin_signed_in?
+            %h3{style:'margin:0;'}= "Hola #{current_admin.worker_attributes.first.nom_com}, no olvides llenar tu:"
+            %br
+          = link_to "Registro diario", new_admin_session_path, class: 'custom-btn custom-btn--big custom-btn--style-1', style: 'margin: 15px 0;'
+          %hr
+        .col-md-6.col-sm-12
+          %h4
+            ¿Cómo lavarse correctamente las manos con
+            %br
+            %strong Agua y Jabon?
+          .img-container
+            =link_to image_tag('manos.jpg', class: 'img-responsive img-portection'), image_url("manos.jpg"), target: '_blank'
+        .col-md-6.col-sm-12
+          %h4
+            ¿Cómo lavarse correctamente las manos con
+            %br
+            %strong Gel desinfectante?
+          .img-container
+            = link_to image_tag('gel.jpg', class: 'img-responsive img-portection'), image_url("gel.jpg"), target: '_blank'
+
+    .col-md-1.col-sm-12
+= render 'layouts/footer'
+
+:css
+  .img-container {
+      border: solid 1px #f3f3f3;
+      padding: 20px 30px;
+      box-shadow: 1px 1px 6px 2px #d2d2d2;
+      cursor: pointer;
+  }
+
+  .img-responsive.img-portection {
+      max-width: 75%;
+  }
