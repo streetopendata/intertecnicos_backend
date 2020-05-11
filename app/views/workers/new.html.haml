@@ -10,23 +10,33 @@
             .col-md-12{style:"margin-bottom: 10px;"}
               %h3 Datos personales
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :nom_com, placeholder: "Nombre Completo", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.text_field :nom_com, placeholder: "Nombre Completo", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :sede, placeholder: "Sede", readonly: 'readonly', value: 'Carrera 74 B    64 F 20  ', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.text_field :sede, placeholder: "Sede", readonly: 'readonly', value: 'Carrera 74 B    64 F 20  ', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
             .col-md-3{style:"margin-bottom: 10px;"}
-              = f.text_field :tip_doc, placeholder: 'Tipo de documento', value: 'CC', readonly: 'readonly', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.text_field :tip_doc, placeholder: 'Tipo de documento', value: 'CC', readonly: 'readonly', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
             .col-md-9{style:"margin-bottom: 10px;"}
-              = f.text_field :num_doc, placeholder: '# de documento', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.number_field :num_doc, placeholder: '# de documento', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required', min: '0'
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :tel_con, placeholder: 'Telefono', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.number_field :tel_con, placeholder: 'Telefono', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required', min: '0'
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :sexo, placeholder: 'Sexo', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              %h4 Sexo
+              .col-md-12{style: "display: flex;justify-content: center;"}
+                .it
+                  = f.label 'Femenino'
+                  = f.radio_button :sexo, 'Femenino', required: 'required'
+                .it
+                  = f.label 'Masculino'
+                  = f.radio_button :sexo, 'Masculino', required: 'required'
+                .it
+                  =f.label 'Otro'
+                  = f.radio_button :sexo, 'Otro', required: 'required'
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :address, placeholder: 'Dirección completa', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.text_field :address, placeholder: 'Dirección completa', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :localidad, placeholder: 'Localidad', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.text_field :localidad, placeholder: 'Localidad', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :zone, placeholder: 'Barrio de residencia', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.text_field :zone, placeholder: 'Barrio de residencia', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
             .col-md-12{style:"margin-bottom: 10px;"}
               %h3 Datos extra personales
             .col-md-12{style:"margin-bottom: 10px;"}
@@ -48,42 +58,55 @@
                   =f.label 'Caminar'
                   = f.check_box :walk
             .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_field :n_peo_worker, placeholder: '¿Cuál es el número total de personas que viven con usted?', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.number_field :n_peo_worker, placeholder: '¿Cuál es el número total de personas que viven con usted?', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'true', min: '0'
             .col-md-6.col-sm-12{style:"margin-bottom: 10px;"}
               = f.label '¿De las personas que viven con usted cuántas son mayores de 60 años?'
-              = f.text_field :n_peo_old, placeholder: 'Ej. 2', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.number_field :n_peo_old, placeholder: 'Ej. 2', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'true', min: '0'
             .col-md-6.col-sm-12{style:"margin-bottom: 10px;"}
-              = f.label '¿De las personas que viven con usted cuántas son menores de 60 años?'
-              = f.text_field :n_peo_young, placeholder: 'Ej. 1', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey'
+              = f.label '¿De las personas que viven con usted cuántas son menores de 18 años?'
+              = f.number_field :n_peo_young, placeholder: 'Ej. 1', class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'true', min: '0'
             .col-md-12{style:"margin-bottom: 10px;"}
-              %h4 ¿Cuántas personas con condiciones de morbilidad preexistente viven con el empleado?
+              %h4{style: 'font-size: 18px;margin: 10px 0;'} ¿Cuantás personas que viven con usted padecen las siguientes condiciones?
             .col-md-12{style:"margin-bottom: 10px;"}
-              .col-md-12{style: "display: flex;flex-wrap: wrap; justify-content:end;"}
+              .col-md-12{style: "display: flex;flex-wrap: wrap; justify-content:end;flex-direction: column; text-align: end;"}
                 .it{style: 'display: flex;'}
                   = f.label 'Diabetes', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_diabetes, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_diabetes, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'Enfermedades cardiovasculares', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_cardio, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_cardio, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'Hipertensión arterial- HTA', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_hypertension, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_hypertension, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'ACV,  Accidente Cerebrovascular', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_acv, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_acv, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'Enfermedades inmunosupresoras', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_inmunosuopressant, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_inmunosuopressant, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'Enfermedad Obstructiva crónica -EPOC', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_obs_cronic, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_obs_cronic, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'Malnutrición (obesidad y desnutrición)', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_malnutrition, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_malnutrition, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
                 .it{style: 'display: flex;'}
                   = f.label 'Fumadores', :style => 'margin-right: 10px;'
-                  = f.text_field :dis_smoker, placeholder: 'Ej: 0', value: 0
+                  = f.number_field :dis_smoker, placeholder: 'Ej: 0', value: 0, required: 'required', min: '0', class: 'input-dis'
             .col-md-12
               = f.submit "Guardar", class: ' custom-btn custom-btn--big custom-btn--style-1'
     .col-md-3.col-sm-0
 = render 'layouts/footer'
+
+
+:css
+  .input-dis {
+    background: #f2f2f2;
+    border: none;
+    margin: 2px 0px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 7px;
+    max-width: 85px;
+    margin-left: 20px;
+  }
