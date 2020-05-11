@@ -5,6 +5,7 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :worker_attributes
+  has_many :daily_entrys
 
   enum role: %i[worker superadmin]
 end

@@ -8,7 +8,7 @@
           - if admin_signed_in?
             %h3{style:'margin:0;'}= "Hola #{current_admin.worker_attributes.first.nom_com}, no olvides llenar tu:"
             %br
-          = link_to "Registro diario", new_admin_session_path, class: 'custom-btn custom-btn--big custom-btn--style-1', style: 'margin: 15px 0;'
+          = link_to "Registro diario", new_admin_daily_entry_url, class: 'custom-btn custom-btn--big custom-btn--style-1', style: 'margin: 15px 0;'
           %hr
         .col-md-6.col-sm-12
           %h4

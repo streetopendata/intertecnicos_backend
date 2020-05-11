@@ -2,7 +2,7 @@ class WorkersController < ApplicationController
   def index
     if current_admin.worker_attributes.length === 0
        redirect_to new_admin_worker_url(current_admin.id)
-    end    
+    end
   end
 
   def new

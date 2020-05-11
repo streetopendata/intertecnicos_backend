@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :admins do
     resources :workers
+    resources :daily_entrys
   end
 
   namespace :user do
