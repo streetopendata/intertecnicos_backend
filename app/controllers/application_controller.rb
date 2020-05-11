@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
         admins_path
       else
         # homepage_worker_url
-        admin_workers
+        admin_workers_url
       end
     end
   end
