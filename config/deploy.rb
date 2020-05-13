@@ -4,7 +4,7 @@ lock "~> 3.14.0"
 set :application, "intertecnicos"
 set :repo_url, "git@github.com:streetopendata/intertecnicos_backend.git"
 
-set :user, "deploy"
+set :user, "deploy_user"
 set :stages, %w(production staging)
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')

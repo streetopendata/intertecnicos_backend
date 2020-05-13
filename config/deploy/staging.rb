@@ -17,9 +17,9 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{deploy@3.23.105.162}
-role :web, %w{deploy@3.23.105.162}
-role :db,  %w{deploy@3.23.105.162}, :primary => truncate
+role :app, %w{deploy_user@3.19.242.211}
+role :web, %w{deploy_user@3.19.242.211}
+role :db,  %w{deploy_user@3.19.242.211}, :primary => truncate
 set :branch, "master"
 set :rails_env, "staging"
 set :deploy_to, "/var/www/intertecnicos_staging"

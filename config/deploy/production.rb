@@ -7,9 +7,9 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-role :app, %w{deploy@3.23.105.162}
-role :web, %w{deploy@3.23.105.162}
-role :db,  %w{deploy@3.23.105.162}, :primary => truncate
+role :app, %w{deploy_user@3.19.242.211}
+role :web, %w{deploy_user@3.19.242.211}
+role :db,  %w{deploy_user@3.19.242.211}, :primary => truncate
 
 set :branch, "production"
 set :rails_env, "production"
