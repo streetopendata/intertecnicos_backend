@@ -57,7 +57,7 @@ set :deploy_to, "/var/www/intertecnicos_production"
 #  }
 
 set :ssh_options, {
-   keys: %w(/home/deploy_user/.ssh/authorized_keys),
+   keys: %w(~/Desktop/deploy_user.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
