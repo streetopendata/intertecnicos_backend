@@ -9,7 +9,7 @@
 
 role :app, %w{deploy_user@3.19.242.211}
 role :web, %w{deploy_user@3.19.242.211}
-role :db,  %w{deploy_user@3.19.242.211}, :primary => truncate
+
 
 set :branch, "production"
 set :rails_env, "production"
@@ -57,7 +57,7 @@ set :deploy_to, "/var/www/intertecnicos_production"
 #  }
 
 set :ssh_options, {
-   keys: %w(/home/ec2-user/.ssh/authorized_keys),
+   keys: %w(~/Desktop/deploy_user.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
