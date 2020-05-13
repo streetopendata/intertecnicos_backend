@@ -54,9 +54,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano', '~> 3.9'
   gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rvm'
   gem 'capistrano-passenger'
+  gem 'capistrano-figaro-yml', '~> 1.0.2'
 end
 
 group :test do
@@ -74,3 +76,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 
 gem "haml"
+
+gem "figaro"

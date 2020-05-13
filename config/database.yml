@@ -22,12 +22,8 @@ test:
 
 staging:
   <<: *default
-  database: intertecnicos_staging
-  username: deploy
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  database: db/staging.sqlite3
 
 production:
   <<: *default
-  database: intertecnicos_production
-  username: deploy
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+  database: db/production.sqlite3
