@@ -18,8 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'pry'
 
-gem 'execjs'
-
+# gem 'execjs'
+# gem 'therubyracer'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -59,6 +59,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
   gem 'capistrano-figaro-yml', '~> 1.0.2'
+  gem 'capistrano3-puma'
 end
 
 group :test do

@@ -250,7 +250,6 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.2)
-  execjs
   figaro
   haml
   jbuilder (~> 2.5)
