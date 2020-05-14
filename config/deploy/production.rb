@@ -15,7 +15,7 @@ set :branch, "master"
 set :rails_env, "production"
 
 set :ssh_options, {
-   keys: %w(/home/ubuntu/.ssh/authorized_keys),
+   keys: %w(~/Desktop/deploy_user.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
