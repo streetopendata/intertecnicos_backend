@@ -4,7 +4,7 @@ lock "~> 3.14.0"
 set :puma_conf, "/var/www/intertecnicos/shared/config/puma.rb"
 set :application, 'intertecnicos'
 set :repo_url, 'git@github.com:streetopendata/intertecnicos_backend.git'
-set :deploy_to, '/home/ubuntu/trackerr'
+set :deploy_to, '/home/ubuntu/intertecnicos'
 set :use_sudo, true
 set :branch, 'master'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
