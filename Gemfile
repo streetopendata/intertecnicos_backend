@@ -59,6 +59,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
   gem 'capistrano-figaro-yml', '~> 1.0.2'
+  gem 'capistrano3-puma'
 end
 
 group :test do
