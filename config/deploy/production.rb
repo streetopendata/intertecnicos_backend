@@ -3,10 +3,22 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-# server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
+server "52.15.73.226", user: "ubuntu", roles: %w{app db web}
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+role :app, %w{ubuntu@52.15.73.226}
+role :web, %w{ubuntu@52.15.73.226}
+role :db,  %w{ubuntu@52.15.73.226}
+
+set :branch, "master"
+set :rails_env, "production"
+
+set :ssh_options, {
+   keys: %w(/home/ubuntu/.ssh/authorized_keys),
+   forward_agent: false,
+   auth_methods: %w(publickey password)
+ }
 
 
 # role-based syntax
