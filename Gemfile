@@ -59,7 +59,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
-  gem 'capistrano3-puma'
+  gem 'capistrano3-puma', :git => 'git@github.com:seuros/capistrano-puma.git', :ref => 'c1d705d',  require: false
 end
 
 group :test do
