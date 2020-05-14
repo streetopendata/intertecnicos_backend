@@ -46,20 +46,19 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
-gem 'listen', '~> 3.1.5'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.1.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'capistrano', '~> 3.9'
-  gem 'capistrano-rails', '~> 1.1'
-  gem 'capistrano-rvm'
-  gem 'capistrano-passenger'
-  gem 'capistrano-figaro-yml', '~> 1.0.2'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
 end
 
@@ -78,5 +77,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 
 gem "haml"
-
-gem "figaro"
