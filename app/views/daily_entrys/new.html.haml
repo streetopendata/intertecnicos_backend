@@ -5,16 +5,34 @@
     .col-md-6.col-sm-12
       .start-screen__content-form.js-contact-form
         %h2= @worker.email
-        %divq
+        %div
           = form_for :daily_entrys, :url => {:action => :create}, :method => "post", :html => {:class => 'row'} do |f|
-            .col-md-12{style:"margin-bottom: 10px;"}
+            .col-md-12.container-row
               %h4 Por favor ingrese los datos del registro diario:
-            .col-md-12{style:"margin-bottom: 10px;"}
               = f.text_field :temperature_ini, placeholder: "¿Cúal es su temperatura al iniciar la jornada laboral?", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
-            .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_area :respiratory_symptom, placeholder: "Indique si posee cualquier sintoma respiratorio",  class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
-            .col-md-12{style:"margin-bottom: 10px;"}
-              = f.text_area :contact_with_infected, placeholder: "Informe cualquier sospecha de síntoma o contacto con personas diagnosticadas con COVID-19.", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey', required: 'required'
+            %br
+            .col-md-12.container-row
+              %h4  ¿Posee usted algun sintoma o molestia respiratoria?
+              .col-md-12{style: "display: flex;justify-content: center;"}
+                .it
+                  = f.label 'Si'
+                  = f.radio_button :is_sic, "si", id: 'is_sic'
+                .it
+                  = f.label 'No'
+                  = f.radio_button :is_sic, "no", :checked => true
+              = f.text_area :respiratory_symptom, placeholder: "Indique si posee cualquier sintoma respiratorio",  class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'sicness'
+            %br
+            .col-md-12.container-row
+              %h4  ¿Sospecha de síntomas o contacto con personas diagnosticadas con COVID-19?
+              .col-md-12{style: "display: flex;justify-content: center;"}
+                .it
+                  = f.label 'Si'
+                  = f.radio_button :is_in_contact, "si", id: 'is_in_contact'
+                .it
+                  = f.label 'No'
+                  = f.radio_button :is_in_contact, "no", :checked => true
+              = f.text_area :contact_with_infected, placeholder: "Informe cualquier sospecha de síntoma o contacto con personas diagnosticadas con COVID-19.", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'contactWith'
+            %br
             .col-md-12
               = f.submit "Guardar", class: ' custom-btn custom-btn--big custom-btn--style-1'
     .col-md-3.col-sm-0
@@ -32,3 +50,42 @@
     max-width: 85px;
     margin-left: 20px;
   }
+
+  .hide{
+    display: none !important;
+  }
+
+  .container-row{
+    margin-bottom: 30px;
+  }
+
+
+
+:javascript
+    $(document).ready(function(){
+
+
+      $('input[name="daily_entrys[is_in_contact]"]').change(function(){
+        console.log(this)
+        if($('#is_in_contact').is(':checked')){
+          $('#contactWith').removeClass('hide')
+        }else{
+          $('#contactWith').addClass('hide')
+        }
+      })
+
+
+      $('input[name="daily_entrys[is_sic]"]').change(function(){
+        console.log(this)
+        if($('#is_sic').is(':checked')){
+          $('#sicness').removeClass('hide')
+        }else{
+          $('#sicness').addClass('hide')
+        }
+      })
+
+
+
+
+
+    })
