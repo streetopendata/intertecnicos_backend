@@ -16,22 +16,22 @@
               .col-md-12{style: "display: flex;justify-content: center;"}
                 .it
                   = f.label 'Si'
-                  = f.radio_button :is_sic, "si", id: 'is_sic'
+                  = f.radio_button :is_sick, "1", id: 'is_sick'
                 .it
                   = f.label 'No'
-                  = f.radio_button :is_sic, "no", :checked => true
-              = f.text_area :respiratory_symptom, placeholder: "Indique si posee cualquier sintoma respiratorio",  class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'sicness'
+                  = f.radio_button :is_sick, "0", :checked => true
+              = f.text_area :respiratory_symptom, placeholder: "¿Posee usted algun sintoma o molestia respiratoria?",  class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'sicness'
             %br
             .col-md-12.container-row
               %h4  ¿Sospecha de síntomas o contacto con personas diagnosticadas con COVID-19?
               .col-md-12{style: "display: flex;justify-content: center;"}
                 .it
                   = f.label 'Si'
-                  = f.radio_button :is_in_contact, "si", id: 'is_in_contact'
+                  = f.radio_button :is_in_contact, "1", id: 'is_in_contact'
                 .it
                   = f.label 'No'
-                  = f.radio_button :is_in_contact, "no", :checked => true
-              = f.text_area :contact_with_infected, placeholder: "Informe cualquier sospecha de síntoma o contacto con personas diagnosticadas con COVID-19.", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'contactWith'
+                  = f.radio_button :is_in_contact, "0", :checked => true
+              = f.text_area :contact_with_infected, placeholder: "¿Sospecha de síntomas o contacto con personas diagnosticadas con COVID-19?", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'contactWith'
             %br
             .col-md-12
               = f.submit "Guardar", class: ' custom-btn custom-btn--big custom-btn--style-1'
@@ -75,9 +75,9 @@
       })
 
 
-      $('input[name="daily_entrys[is_sic]"]').change(function(){
+      $('input[name="daily_entrys[is_sick]"]').change(function(){
         console.log(this)
-        if($('#is_sic').is(':checked')){
+        if($('#is_sick').is(':checked')){
           $('#sicness').removeClass('hide')
         }else{
           $('#sicness').addClass('hide')

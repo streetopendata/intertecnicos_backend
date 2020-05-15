@@ -21,6 +21,8 @@ class DailyEntrysController < ApplicationController
                   :respiratory_symptom,
                   :contact_with_infected,
                   :start_day,
+                  :is_in_contact,
+                  :is_sick,
                   :final_day)
   end
 end
