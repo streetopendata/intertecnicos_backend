@@ -608,3 +608,161 @@
                 %i.fa.fa-heart
                 por
                 %a.__dev{:href => "http://streetopendata.com/", :target => "_blank"} Street Open Data Lab
+
+:javascript
+
+    var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+    };
+
+    $(document).ready(function(){
+
+        $('.owl-services').owlCarousel({
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 2
+                }
+            }
+        });
+
+        $('.owl-inicio').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+
+
+        $('#frmSm').submit(function(e){
+            e.preventDefault()
+            var data = {
+                service_id: 'smtp_server',
+                template_id: 'template_AHHlzOkW',
+                user_id: 'user_JihHQvk8CoDaJ8e0xdYja',
+                template_params: {
+                    "from_name": $('#nomInp').val(),
+                        "compain": $('#compInp').val(),
+                        "phone": $('#phoneInp').val(),
+                        "from_email": $('#emailInp').val(),
+                        "message_html": $('#messInp').val()
+                }
+
+            };
+
+            $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                type: 'POST',
+                data: JSON.stringify(data),
+                contentType: 'application/json'
+            }).done(function() {
+                Swal.fire(
+                    '¡Listo!',
+                    'Tu mensaje ha sido entregado',
+                    'success'
+                    )
+
+                $('input[type=text],input[type=email], textarea').val('')
+
+            }).fail(function(error) {
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: JSON.stringify(error),
+                    })
+
+
+            });
+        })
+
+        $('.tabs-services').on('click', 'a', function(e){
+          e.preventDefault()
+          var idr = $(this).attr('idr')
+          $('.service-box').fadeOut()
+          $('.tabs-services li a').removeClass('activeTabL')
+          $(this).addClass('activeTabL')
+          $('#'+idr).fadeIn()
+        })
+
+
+    })
+
+
+
+      function goTo(id){
+          $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+      }                
