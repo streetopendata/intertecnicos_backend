@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_11_171836) do
+ActiveRecord::Schema.define(version: 2020_05_15_213443) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 2020_05_11_171836) do
     t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_sick", default: false
+    t.boolean "is_in_contact", default: false
     t.index ["admin_id"], name: "index_daily_entries_on_admin_id"
   end
 
