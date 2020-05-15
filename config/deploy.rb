@@ -3,6 +3,7 @@ lock '~> 3.11.0'
 
 set :application, 'intertecnicos'
 set :repo_url, 'git@github.com:streetopendata/intertecnicos_backend.git'
+set :branch, "master"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
