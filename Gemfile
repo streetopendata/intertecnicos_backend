@@ -55,7 +55,7 @@ group :development do
   gem 'letter_opener'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.11.0'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
