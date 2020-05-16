@@ -20,7 +20,7 @@
                 .it
                   = f.label 'No'
                   = f.radio_button :is_sick, "0", :checked => true
-              = f.text_area :respiratory_symptom, placeholder: "¿Posee usted algun sintoma o molestia respiratoria?",  class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'sicness'
+              = f.text_area :respiratory_symptom, placeholder: "¿Posee usted algun sintoma o molestia respiratoria?",  class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', style: "max-height: 30px", rows:"4", cols:"50", id: 'sicness'
             %br
             .col-md-12.container-row
               %h4  ¿Sospecha de síntomas o contacto con personas diagnosticadas con COVID-19?
@@ -31,10 +31,10 @@
                 .it
                   = f.label 'No'
                   = f.radio_button :is_in_contact, "0", :checked => true
-              = f.text_area :contact_with_infected, placeholder: "¿Sospecha de síntomas o contacto con personas diagnosticadas con COVID-19?", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', required: 'required', style: "max-height: 30px", rows:"4", cols:"50", id: 'contactWith'
+              = f.text_area :contact_with_infected, placeholder: "¿Sospecha de síntomas o contacto con personas diagnosticadas con COVID-19?", class: 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required textfield textfield--grey hide', style: "max-height: 30px", rows:"4", cols:"50", id: 'contactWith'
             %br
             .col-md-12
-              = f.submit "Guardar", class: ' custom-btn custom-btn--big custom-btn--style-1'
+              = f.submit "Enviar", class: ' custom-btn custom-btn--big custom-btn--style-1'
     .col-md-3.col-sm-0
 = render 'layouts/footer'
 
