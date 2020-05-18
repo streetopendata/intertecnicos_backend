@@ -897,8 +897,46 @@ input#coupon_code {
   text-decoration: none;
 }
 
+
+.img-logo-style{
+  margin: 20px 0px 14px 25px;
+}
+
+
+.top-serv-pad{
+  padding-top: 76px;
+}
+
+.mb-img-adj{
+  margin-left: 30px;
+}
+
+//here
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+  .img-logo-style{
+    margin: 13px 0px 10px 3px;
+  }
+
+  .top-serv-pad{
+      padding-top:0;
+  }
+
+  .mb-adj{
+    margin-bottom: 15px;
+  }
+
+  .mb-adj-bt {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .mb-img-adj{
+    margin-left: 0px;
+    text-align: center;
+  }
+
   .contact-info {
     font-size: 1.7rem;
   }
@@ -965,7 +1003,7 @@ input#coupon_code {
     background-image: url(bg_1-2.jpg);background-position: left top;
 }
 
-.bg-img-algo{  
+.bg-img-algo{
   background-position: center;
   background-origin: content-box;
   background-size: cover;

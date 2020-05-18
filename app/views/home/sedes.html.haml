@@ -31,15 +31,15 @@
                             Cumpliendo con la directriz de la Alcaldía de Bogotá, para que las empresas autorizadas por el Gobierno nacional en el decreto 593 de 2020,  a continuación se encuentra disponible para las autoridades competentes la información de nuestras sedes y personal debidamente actualizada.
                           %p Descargar informacion  de sedes y personal a cargo
                           %br/
-                          .row
+                          .row.mb-adj
                             .col-md-6.col-sm-12
-                              = link_to "Información de sedes y de personal", "home/download_intertecnicos", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1',  :download => "Intertecnicos"
+                              = link_to "Información de sedes y de personal", "home/download_intertecnicos", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1 mb-adj-bt',  :download => "Intertecnicos"
                             .col-md-6.col-sm-12
-                              = link_to "Plan de Manejo de Demanda Segura", "home/download_file", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1',  :download => "Intertecnicos"
+                              = link_to "Plan de Manejo de Demanda Segura", "home/download_file", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1 mb-adj-bt',  :download => "Intertecnicos"
 
                         .col-12.col-md-10.col-lg-6
-                          %div{:style => "margin-left: 30px;"}
+                          .mb-img-adj
                             =image_tag 'worker.jpg', class: 'img-item item'
-                            = link_to "Ingreso de personal", new_admin_session_path, class: 'custom-btn custom-btn--big custom-btn--style-1', style: 'margin: 15px 0;'
+                            = link_to "Ingreso de personal", new_admin_session_path, class: 'custom-btn custom-btn--big custom-btn--style-1 mb-adj-bt', style: 'margin: 15px 0;'
 
       = render 'layouts/footer'
