@@ -248,6 +248,8 @@ GEM
       sidekiq (>= 3)
       thwait
       tilt (>= 1.4.0)
+    sitemap_generator (6.1.0)
+      builder (~> 3.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -319,6 +321,7 @@ DEPENDENCIES
   selenium-webdriver
   sidekiq
   sidekiq-scheduler
+  sitemap_generator
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
