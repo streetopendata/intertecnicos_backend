@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def index    
+  def index
   end
 
   def sedes
@@ -20,5 +20,11 @@ class HomeController < ApplicationController
       type: "application/zip"
     )
   end
+
+  def robots
+    respond_to :text
+    expires_in 6.hours, public: true
+  end
+
 
 end

@@ -1,0 +1,14 @@
+- if Rails.env.production?
+  User-Agent: *
+  Allow: /
+  Disallow: /sedes-personal
+  Disallow: /admins/sign_in
+  Disallow: /admins
+  Disallow: /admins/sign_up
+  Disallow: /customers/sign_in
+  Disallow: /customers
+  Disallow: /customers/sign_up
+  Sitemap: https://intertecnicos.com/sitemap.xml.gz
+- else
+  User-Agent: *
+  Disallow: /

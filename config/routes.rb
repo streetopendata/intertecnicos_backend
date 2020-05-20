@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'home/download_intertecnicos'
   get 'home/download_file'
 
+  get '/robots.:format' => 'home#robots'
+
 
   resources :admins do
     resources :workers
