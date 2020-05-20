@@ -35,7 +35,7 @@
                               = link_to "Ir a la tienda", store_path
                               = link_to 'Salir', destroy_customer_session_path , method: :delete , style: 'align-self: center;'
                             - else
-                              = link_to "Ir a la tienda", new_customer_session_path, :target => " _blank"
+                              -# = link_to "Ir a la tienda", new_customer_session_path, :target => " _blank"
                             %a{:href => "./sedes-personal", :style => "color:tomato;", :target => " _blank"} Covid-19
                             %a.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "javascript:goTo('contact')"} Escribenos
                           .top-bar__side-menu-button.js-side-menu-open
@@ -56,7 +56,7 @@
                       .col-12.col-md-10.col-lg-6
                         %h6.__subtitle{:style => "color: #008A78;  "} Un equipo altamente calificado de ingenieros y tècnicos  que hace crecer tu compañía.
                         %h2
-                          %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial de
+                          %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial
                           %br/
                           %span.txt-rotate{"data-period" => "1000", "data-rotate" => "[ \"Subestaciones eléctricas en media y baja tensión.\", \" Redes eléctricas de baja y media tensión.\", \"Energías renovables.\"]"}
                         %p
@@ -112,7 +112,7 @@
                 %p
                   Somos una compañía con  más 15 años en el mercado, ejecutando proyectos por todo el país, ofreciendo soluciones orientadas a cubrir las necesidades de la industria colombiana con la mayor calidad, brindando asesoría 360 grados, soporte técnico y la calidad como nuestra garantía.
             .nt_btn_6547.mt-9
-              %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "#contact"} Agendar asesoria
+              %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "https://web.whatsapp.com/send?phone=573115412451", :target => "_blank"} Agendar asesoria
           .nt-column.col-sm-12.col-lg-6.col-12.text-center.text-md-left
             .spacer.py-5.d-lg-none
             .video-box.video-box--s2
@@ -392,7 +392,7 @@
                   .__body.pt-8.pb-9
                     %p Entregamos en tus instalaciones!
               .text-center.nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
-                %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "#contact"}
+                %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "https://web.whatsapp.com/send?phone=573115412451", :target => "_blank"}
                   Agenda tu servicio
               .row
                 .nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
@@ -582,15 +582,15 @@
                 %address.footer__address.footer__address--s2
                 %ul
                   %li
-                    %i.__ico.fontello-location>
+                    %i.__ico.fontello-location{style: 'margin-right: 15px;'}
                     Carrera 74b 64f-20, Bogotá
                   %li
-                    %i.__ico.fontello-mail-1
-                    %a{:href => "mailto:info@intertecnicos.com"}
+                    %i.__ico.fontello-mail-1{style: 'margin-right: 10px;'}
+                    %a{ style: 'color: #fff', :href => "mailto:info@intertecnicos.com", target: '_blank'}
                       %span.__cf_email__ info@intertecnicos.com
                   %li
-                    %i.__ico.fontello-phone
-                    %a{:href => "https://web.whatsapp.com/send?phone=573115412451"} +573115412451
+                    %i.__ico.fontello-phone{style: 'margin-right: 10px;'}
+                    %a{ style: 'color: #fff', :href => "https://web.whatsapp.com/send?phone=573115412451", target: '_blank'} +573115412451
           .z-index-4.nt-column.col-sm-12.col-lg-4.col-md-7.col-12
             .spacer.py-4.d-lg-none
             %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"}
