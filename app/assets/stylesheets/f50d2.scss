@@ -10977,6 +10977,7 @@ a.text-dark {
 * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)*/
 
 @font-face {
+  font-display: swap;
   font-family: FontAwesome;
   src: url(asset-path('fonts/fontawesome-webfont3e6e.eot'));
   src:
@@ -20937,6 +20938,7 @@ ol, ul {
 }
 
 @font-face {
+  font-display: swap;
   font-family: fontello;
   src: url(asset-path('fonts/fontello2493.eot'));
   src:

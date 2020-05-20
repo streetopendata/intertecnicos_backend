@@ -1,21 +1,25 @@
 @font-face {
+  font-display: swap;
   font-family: Quicksand-Regular;
-  src: url(../fonts/Quicksand-Regular.ttf);
+  src: url(asset-path('fonts/Quicksand-Regular.ttf'));
 }
 
 @font-face {
+  font-display: swap;
   font-family: Quicksand-Bold;
-  src: url(../fonts/Quicksand-Bold.ttf);
+  src: url(asset-path('fonts/Quicksand-Bold.ttf'));
 }
 
 @font-face {
+  font-display: swap;
   font-family: Quicksand-Medium;
-  src: url(../fonts/Quicksand-Medium.ttf);
+  src: url(asset-path('fonts/Quicksand-Medium.ttf'));
 }
 
 @font-face {
+  font-display: swap;
   font-family: Quicksand-Variable;
-  src: url(../fonts/Quicksand-VariableFont_wght.ttf);
+  src: url(asset-path('fonts/Quicksand-VariableFont_wght.ttf'));
 }
 
 .imageDescription {
