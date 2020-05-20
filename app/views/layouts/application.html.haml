@@ -3,7 +3,21 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title Intertecnicos
+    %meta{:content => "Intertecnicos - Somos una compañía con  más 15 años en el mercado, ejecutando proyectos por todo el país, ofreciendo soluciones orientadas a cubrir las necesidades de la industria colombiana con la mayor calidad, brindando asesoría 360 grados, soporte técnico y la calidad como nuestra garantía.", :name => "description"}/
+    %meta{:content => "Ingeniería, Electricidad, Soluciones Electricas, Electrónica, profesional, profesionales", :name => "keywords"}/
+    %meta{:content => "Intertecnicos", :name => "author"}/
+    %meta{:content => "Intertecnicos", :property => "og:title"}/
+    %meta{:content => image_url("ogimage.png"), :property => "og:image"}/
+
+    %link{:href => image_url("favicon/apple-touch-icon.png"), :rel => "apple-touch-icon", :sizes => "76x76"}/
+    %link{:href => image_url("favicon/favicon-32x32.png"), :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => image_url("favicon/favicon-16x16.png"), :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:href => image_url("favicon/site.webmanifest"), :rel => "manifest"}/
+    %link{:color => "#5bbad5", :href => "./assets/img/favicon/safari-pinned-tab.svg", :rel => "mask-icon"}/
+    %link{:href => root_url, :rel => "canonical"}/
+
+
+    %title Intertecnicos servicios de ingeniería eléctrica
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'

@@ -11,7 +11,7 @@
                 .container-fluid
                   .row.align-items-center.no-gutters
                     %a#nt-logo.top-bar__logo.site-logo{:href => root_url}
-                      =image_tag('logo.svg', class: 'img-fluid main-logo img-logo-style', alt:"Intertecnicos", )
+                      =image_tag('logo.svg', class: 'img-fluid main-logo img-logo-style', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen')
                     %a#top-bar__navigation-toggler.top-bar__navigation-toggler{:href => "javascript:void(0);"}
                       %span
                     .top-bar__collapse
@@ -55,7 +55,7 @@
                     .row
                       .col-12.col-md-10.col-lg-6
                         %h6.__subtitle{:style => "color: #008A78;  "} Un equipo altamente calificado de ingenieros y tècnicos  que hace crecer tu compañía.
-                        %h2
+                        %h1{style: "font-size: 4rem; margin-bottom: 0;"}
                           %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial
                           %br/
                           %span.txt-rotate{"data-period" => "1000", "data-rotate" => "[ \"Subestaciones eléctricas en media y baja tensión.\", \" Redes eléctricas de baja y media tensión.\", \"Energías renovables.\"]"}
@@ -71,12 +71,12 @@
                         %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "javascript:goTo('services')"} Saber mas
                       .col-12.col-md-10.col-lg-6
                         .owl-carousel.owl-inicio{:style => "margin-left: 30px;"}
-                          =image_tag 'media-tension.jpg', class: 'img-item item'
-                          =image_tag '1.jpg', class: 'img-item item'
-                          =image_tag '7.jpg', class: 'img-item item'
-                          =image_tag '8.jpg', class: 'img-item item'
-                          =image_tag 'bobina.jpg', class: 'img-item item'
-                          =image_tag 'tester.jpg', class: 'img-item item'
+                          =image_tag 'media-tension.jpg', class: 'img-item item', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag '1.jpg', class: 'img-item item', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag '7.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag '8.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag 'bobina.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag 'tester.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
     #brands.nt-section.section.pb-0{style: "padding-top: 0;"}
       .container
         .row.flex-md-row-reverse
@@ -90,12 +90,12 @@
                 .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278271921.has-opacity
                   %figure.wpb_wrapper.vc_figure
                     .vc_single_image-wrapper.vc_box_border_grey
-                      =image_tag 'brands/conalvias.png', class: 'vc_single_image-img'
+                      =image_tag 'brands/conalvias.png', class: 'vc_single_image-img', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
               .nt-column.col-6.col-md-3
                 .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278265574.has-opacity
                   %figure.wpb_wrapper.vc_figure
                     .vc_single_image-wrapper.vc_box_border_grey
-                      =image_tag 'brands/logo-dromos.png', class: 'vc_single_image-img'
+                      =image_tag 'brands/logo-dromos.png', class: 'vc_single_image-img', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
     #about.nt-section.section{:name => "about"}
       .container
         .row
@@ -116,7 +116,7 @@
           .nt-column.col-sm-12.col-lg-6.col-12.text-center.text-md-left
             .spacer.py-5.d-lg-none
             .video-box.video-box--s2
-              = image_tag("about.jpg", class: 'imgService')
+              = image_tag("about.jpg", class: 'imgService', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen')
     / NEW SERVICES
     #services.nt-section.section.vc_custom_1564323430175.nt-has-fill.nt_section_158099{"data-res-css" => ".nt_section_158099{background-image: linear-gradient(to right top, #2dae2f, #00a77c, #0099b8, #0085d4, #0069c6);}", :name => "services"}
       .container
@@ -143,7 +143,7 @@
                 = succeed "Mantenimiento" do
                   %br/
               .imageDescription
-                =image_tag 'services/mantenimiento.jpg', class: 'imgService'
+                =image_tag 'services/mantenimiento.jpg', class: 'imgService', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
               .__description
                 Ponemos a su disposición toda nuestra amplia experiencia en servicio de mantenimiento, entendiendo y comprometiéndonos con su necesidad de solución a la mayor brevedad.
             .spacer.py-6
@@ -179,7 +179,7 @@
                 = succeed "T\u{e9}cnicos" do
                   %br/
               .imageDescription
-                =image_tag 'services/servicio-tecnico.jpg', class: 'imgService'
+                =image_tag 'services/servicio-tecnico.jpg', class: 'imgService', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
               .__description
                 Ofrecemos nuestro conocimiento en la electricidad a través de nuestro servicio técnico, garantizando la seguridad de las instalaciones e integridad física de los operadores.
             .spacer.py-6
@@ -230,7 +230,7 @@
                 = succeed "Ingenier\u{ed}a" do
                   %br/
               .imageDescription
-                =image_tag 'services/servicios-de-ingenieria.jpg', class: 'imgService'
+                =image_tag 'services/servicios-de-ingenieria.jpg', class: 'imgService', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
               .__description
                 Realizamos trabajos de ingeniería del sector eléctrico y de automatización industrial, el cual ponemos a sus servicios garantizando una gestión de calidad y sujeta a las normativas y reglamentos que apliquen. Algunos de nuestros son:
             .spacer.py-6
@@ -276,7 +276,7 @@
                 = succeed "materiales" do
                   %br/
               .imageDescription
-                =image_tag 'services/venta-de-materiales-electricos.jpg', class: 'imgService'
+                =image_tag 'services/venta-de-materiales-electricos.jpg', class: 'imgService', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
               .__description
                 Comercializamos motores trifásicos, monofásicos  y materiales eléctricos a todo el país de media y baja tension, iluminacion industrial y residencial, cableado estructurado, lámparas led entre otros productos.
             .spacer.py-6
@@ -373,17 +373,17 @@
             .row.vc_custom_1557876297396.justify-content-md-start.justify-content-sm-center
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-948.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
-                  =image_tag 'one.svg',style: "max-width: 40%;"
+                  =image_tag 'one.svg',style: "max-width: 40%;", alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                   .__body.pt-8.pb-9
                     %p Recogemos los equipos o enviamos uno de nuestros técnicos en la fecha agendada y dirección indicada
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-569.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
-                  =image_tag 'two.svg',style: "max-width: 40%;"
+                  =image_tag 'two.svg',style: "max-width: 40%;", alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                   .__body.pt-8.pb-9
                     %p Hacemos una revisión detallada y te entregamos un informe del estado del mismo.
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-248.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
-                  =image_tag 'three.svg',style: "max-width: 40%;"
+                  =image_tag 'three.svg',style: "max-width: 40%;", alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                   .__body.pt-8.pb-9
                     %p Posterior a tu aprobación realizamos la reparación o mantenimiento a tus equipos
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
@@ -561,7 +561,7 @@
             .wpb_single_image.wpb_content_element.vc_align_left
               %figure.wpb_wrapper.vc_figure
                 .vc_single_image-wrapper.vc_box_border_grey
-                  =image_tag 'logo_white.png', class: 'vc_single_image-img'
+                  =image_tag 'logo_white.png', class: 'vc_single_image-img', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
             .spacer.py-4
             .s-btns.s-btns--md.s-btns--light.s-btns--rounded
               %ul.d-flex.flex-row.flex-wrap.align-items-center.justify-content-lg-start
