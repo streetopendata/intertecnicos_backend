@@ -1,0 +1,13 @@
+= render 'layouts/header_clean'
+%main
+  #nt-404.nt-404.error
+    .c-section.-bg-dark
+      .c-section-photo
+      .page-404-1
+        .page-404-1-body{style: 'color: #000'}
+          %p.page-404-1-label
+            %span.c-label-1.-style-default.-size-medium.-color-green.-corner-circle 500
+          %h1.page-404-1-title Error interno del servidor          
+          %p.page-404-1-button.mt-9
+            = link_to 'VOLVER A INTERTECNICOS', root_path, class: 'custom-btn custom-btn--medium custom-btn--style-1'
+= render 'layouts/footer'

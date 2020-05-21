@@ -34,4 +34,10 @@ Rails.application.routes.draw do
   end
 
 
+
+  get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#server_errors'
+  get '/422', to: 'errors#unacceptable'
+
+
 end
