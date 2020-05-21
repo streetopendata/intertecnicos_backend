@@ -7,6 +7,9 @@
     %meta{:content => "Intertecnicos, ingeniería eléctrica, servicios  diseño  montaje instalaciones eléctricas,  subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores, redes eléctricas, fabricación de colectores, transformadores en baja tensión, voltajes especiales", :name => "keywords"}/
     %meta{:content => "Intertecnicos", :name => "author"}/
     %meta{:content => "Intertecnicos", :property => "og:title"}/
+    %meta{:content => "ecommerce", :property => "og:type"}/
+    %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de  diseño  montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores, redes eléctricas, fabricación de colectores, transformadores en baja tensión y voltajes especiales", :property => "og:description"}/
+    %meta{:content => "https://intertecnicos.com/", :property => "og:url"}/
     %meta{:content => image_url("ogimage.png"), :property => "og:image"}/
 
     %link{:href => image_url("favicon/apple-touch-icon.png"), :rel => "apple-touch-icon", :sizes => "76x76"}/
@@ -29,10 +32,13 @@
     %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",  :rel => "stylesheet"}/
     %script{:src => "https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js", :type => "text/javascript"}
     %script{:src => "https://cdn.jsdelivr.net/npm/sweetalert2@9"}
+    = render 'layouts/schema'
     :javascript
       (function(){
           emailjs.init("user_JihHQvk8CoDaJ8e0xdYja");
       })();
+
+
 
   %body.page-template.page-template-custom-page.page-template-custom-page-php.page.page-id-1446.theme-techland.nt-shortcode-1.0.woocommerce-no-js.color-style-5.Techland.nt-version-1.0.wpb-js-composer.js-comp-ver-6.0.5.vc_responsive
     = yield
