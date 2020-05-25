@@ -65,8 +65,10 @@
                           es una compañía especializada en diseño, planeación, gestión y ejecución  de proyectos del sector eléctrico industrial, comercial e residencial.
                         %hr/
                         %p
-                          %strong> Nuestra garantía
-                          , un grupo de profesionales altamente calificado comprometido con resolver sus requerimientos de manera eficiente y eficaz.
+                          %ul#selector{style: "font-size: 16px;list-style: inside;text-align: justify;"}
+                            %li Suministro, montaje, pruebas y mantenimiento de subestaciones.
+                            %li Asesoría, diseño, instalaciones y mantenimientos para redes eléctricas.
+                            %li Suministro, Mantenimiento y bobinado de motores eléctricos.
                         .spacer.py-2.py-sm-4
                         %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "javascript:goTo('services')"} Saber mas
                       .col-12.col-md-10.col-lg-6
@@ -75,8 +77,6 @@
                           =image_tag '1.jpg', class: 'img-item item', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                           =image_tag '7.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                           =image_tag '8.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
-                          =image_tag 'bobina.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
-                          =image_tag 'tester.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
     #brands.nt-section.section.pb-0{style: "padding-top: 0;"}
       .container
         .row.flex-md-row-reverse
@@ -148,29 +148,32 @@
                 Ponemos a su disposición toda nuestra amplia experiencia en servicio de mantenimiento, entendiendo y comprometiéndonos con su necesidad de solución a la mayor brevedad.
             .spacer.py-6
           .nt-column.col-sm-12.col-md-6.col-12
-            .review.review--s3.review--slider
-              .owl-carousel.owl-services.top-serv-pad
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Mantenimiento de instalaciones eléctricas
-                  %p Mantenimiento de instalaciones eléctricas y sistema de alumbrados a edificios, oficinas y conjuntos residenciales.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Mantenimiento preventivo
-                  %p Mantenimiento preventivo, reparación y bobinado de motores y maquinarias eléctricas (motores DC, generadores, transformadores).
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Reparación de tarjetas electrónicas
-                  %p Reparación de tarjetas electrónicas y circuitos integrados.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Mantenimiento de plantas
-                  %p Reparación y mantenimiento de plantas eléctricas, moto-soldadores y herramientas eléctricas.
+            .review.review--s3.review--slider{:style => "margin-right:0;"}
+              .servs-container
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details{:open => 'true'}
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Mantenimiento de instalaciones eléctricas
+                    %p Mantenimiento de instalaciones eléctricas y sistema de alumbrados a edificios, oficinas y conjuntos residenciales.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Mantenimiento preventivo
+                    %p Mantenimiento preventivo, reparación y bobinado de motores y maquinarias eléctricas (motores DC, generadores, transformadores).
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Reparación de tarjetas electrónicas
+                    %p Reparación de tarjetas electrónicas y circuitos integrados.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Mantenimiento de plantas
+                    %p Reparación y mantenimiento de plantas eléctricas, moto-soldadores y herramientas eléctricas.
         #servT.row.service-box{:style => "display: none;"}
           .nt-column.col-sm-12.col-md-6.col-12
             .section-heading.section-heading--white
@@ -184,44 +187,50 @@
                 Ofrecemos nuestro conocimiento en la electricidad a través de nuestro servicio técnico, garantizando la seguridad de las instalaciones e integridad física de los operadores.
             .spacer.py-6
           .nt-column.col-sm-12.col-md-6.col-12
-            .review.review--s3.review--slider
-              .owl-carousel.owl-services.top-serv-pad
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseño e instalación de tableros
-                  %p Diseño e instalación de tableros generales de acometida, tableros de distribución, tableros de paso, tableros de mando y fuerza.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Realización de instalaciones eléctricas
-                  %p Realización de instalaciones eléctricas y sistema de alumbrados (residencial, comercial, industrial)
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Fabricación de transformadores
-                  %p Fabricación de transformadores en baja tensión y voltajes especiales.Fabricación de transformadores en baja tensión y  voltajes especiales.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Suministro de materiales
-                  %p Suministro de materiales eléctricos y electrónicos.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Venta de motores
-                  %p Venta de motores trifásicos y monofásicos.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseño y ejecución de instalaciones eléctricas
-                  %p Diseño y ejecución de instalaciones eléctricas en bodegas, industria, empresas, de acuerdo a las necesidades específicas y ubicación de la zona de carga.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Cableado estructurado
-                  %p Cableado estructurado voz y datos
+            .review.review--s3.review--slider{:style => "margin-right:0;"}
+              .servs-container
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details{:open => 'true'}
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseño e instalación de tableros
+                    %p Diseño e instalación de tableros generales de acometida, tableros de distribución, tableros de paso, tableros de mando y fuerza.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Realización de instalaciones eléctricas
+                    %p Realización de instalaciones eléctricas y sistema de alumbrados (residencial, comercial, industrial)
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Fabricación de transformadores
+                    %p Fabricación de transformadores en baja tensión y voltajes especiales.Fabricación de transformadores en baja tensión y  voltajes especiales.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Suministro de materiales
+                    %p Suministro de materiales eléctricos y electrónicos.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Venta de motores
+                    %p Venta de motores trifásicos y monofásicos.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseño y ejecución de instalaciones eléctricas
+                    %p Diseño y ejecución de instalaciones eléctricas en bodegas, industria, empresas, de acuerdo a las necesidades específicas y ubicación de la zona de carga.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Cableado estructurado
+                    %p Cableado estructurado voz y datos
         #servI.row.service-box{:style => "display: none;"}
           .nt-column.col-sm-12.col-md-6.col-12
             .section-heading.section-heading--white
@@ -235,39 +244,44 @@
                 Realizamos trabajos de ingeniería del sector eléctrico y de automatización industrial, el cual ponemos a sus servicios garantizando una gestión de calidad y sujeta a las normativas y reglamentos que apliquen. Algunos de nuestros son:
             .spacer.py-6
           .nt-column.col-sm-12.col-md-6.col-12
-            .review.review--s3.review--slider
-              .owl-carousel.owl-services.top-serv-pad
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseño e instalación de líneas eléctricas
-                  %p Diseño e instalación de líneas eléctricas de media y baja tensión.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseño, fabricación e instalación de subestaciones
-                  %p Diseño, fabricación e instalación de subestaciones eléctricas: cuadros, conexiones, bornes, transformadores, fusibles y empalmes eléctricos.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseños de planos eléctricos
-                  %p Diseños de planos eléctricos para cualquier tipo de necesidad (residencial, comercial, industrial).
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseños de planos
-                  %p Diseños de planos P&amp;ID, lógica para PLC.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Diseño y ejecución de sistemas
-                  %p Diseño y ejecución de sistemas de automatización industrial e instrumentación de procesos.
-                .item.review__item.review__item--rounded.review__item--shadow
-                  .d-table
-                    .d-table-cell.align-middle
-                      %span.review__item__author-name.h5 Estudio de energía
-                  %p Estudio de energía y análisis de redes.
+            .review.review--s3.review--slider{:style => "margin-right:0;"}
+              .servs-container
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details{:open => 'true'}
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseño e instalación de líneas eléctricas
+                    %p Diseño e instalación de líneas eléctricas de media y baja tensión.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseño, fabricación e instalación de subestaciones
+                    %p Diseño, fabricación e instalación de subestaciones eléctricas: cuadros, conexiones, bornes, transformadores, fusibles y empalmes eléctricos.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseños de planos eléctricos
+                    %p Diseños de planos eléctricos para cualquier tipo de necesidad (residencial, comercial, industrial).
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseños de planos
+                    %p Diseños de planos P&amp;ID, lógica para PLC.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Diseño y ejecución de sistemas
+                    %p Diseño y ejecución de sistemas de automatización industrial e instrumentación de procesos.
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
+                  %details
+                    %summary
+                      .d-table-cell.align-middle
+                        %span.review__item__author-name.h5 Estudio de energía
+                    %p Estudio de energía y análisis de redes.
         #vent.row.service-box{:style => "display: none;"}
           .nt-column.col-sm-12.col-md-6.col-12
             .section-heading.section-heading--white
@@ -281,33 +295,33 @@
                 Comercializamos motores trifásicos, monofásicos  y materiales eléctricos a todo el país de media y baja tension, iluminacion industrial y residencial, cableado estructurado, lámparas led entre otros productos.
             .spacer.py-6
           .nt-column.col-sm-12.col-md-6.col-12
-            .review.review--s3.review--slider
-              .owl-carousel.owl-services.top-serv-pad
-                .item.review__item.review__item--rounded.review__item--shadow
+            .review.review--s3.review--slider{:style => "margin-right:0;margin-top: 109px;"}
+              .servs-container
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
                   .d-table
                     .d-table-cell.align-middle
                       %span.review__item__author-name.h5 Para mayor información llame a nuestra línea de atención
                   %p
-                    %a{:href => "tel:+34678567876"}
+                    %a{style: 'color:#00a662;', :href => "tel:+34678567876"}
                       %i.fa.fa-phone
                       7967490
                     %br/
                     o al
                     %br/
-                    %a{:href => "tel:573115412451"}
+                    %a{style: 'color:#00a662;', :href => "tel:573115412451"}
                       %i.fa.fa-whatsapp
                       +57 3115412451
-                .item.review__item.review__item--rounded.review__item--shadow
+                .item.review__item.review__item--rounded.review__item--shadow.mmgbbd
                   .d-table
                     .d-table-cell.align-middle
                       %span.review__item__author-name.h5 Escribenos a nuestro correo
                   %p
-                    %a{:href => "mailto:intertecnicos_ltda@hotmail.com"}
+                    %a{style: 'color:#00a662;', :href => "mailto:intertecnicos_ltda@hotmail.com"}
                       %i.fa.fa-envelope>
                       intertecnicos_ltda@hotmail.com
                     %br/
             %div{:style => "display: flex;justify-content: center;"}
-              %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "javascript:goTo('services')"} Ir a la tienda
+              %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "https://api.whatsapp.com/send?phone=573115412451&text=Hola%20me%20gustaria%20solicitar%20una%20cotización", :target => '_blank'} Solicita una cotización
     / NEW SERVICES
     #flow.nt-section.section{:name => "flow"}
       .container
@@ -603,6 +617,27 @@
                 %i.fa.fa-heart
                 por
                 %a.__dev{:href => "http://streetopendata.com/", :target => "_blank"} Street Open Data Lab
+
+
+:css
+  .item.review__item.review__item--rounded.review__item--shadow.mmgbbd {
+      padding: 14px 20px;
+      min-height: auto !important;
+  }
+
+  summary{
+    display: inline list-item;
+  }
+
+  details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+
 
 :javascript
 
