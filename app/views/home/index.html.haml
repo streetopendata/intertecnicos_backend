@@ -56,13 +56,13 @@
                       .col-12.col-md-10.col-lg-6
                         %h6.__subtitle{:style => "color: #008A78;  "} Un equipo altamente calificado de ingenieros y tècnicos  que hace crecer tu compañía.
                         %h1{style: "font-size: 4rem; margin-bottom: 0;"}
-                          %span.allittleText{:style => "font-weight: bold; font-weight: 600;letter-spacing: 0;"} Mantenimiento eléctrico industrial y residencial
+                          %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial
                           %br/
                           %span.txt-rotate{"data-period" => "1000", "data-rotate" => "[ \"Subestaciones eléctricas en media y baja tensión.\", \" Redes eléctricas de baja y media tensión.\", \"Energías renovables.\"]"}
                         %p
                           %strong
                             %span{:style => "color: #008A78;  "} Intertecnicos
-                          es una compañía especializada en diseño, planeación, gestión y ejecución  de proyectos del sector eléctrico industrial, comercial e residencial.
+                          es una compañía especializada en diseño, planeación, gestión y ejecución  de proyectos del sector eléctrico industrial, comercial y residencial.
                         %hr/
                         %p
                           %ul#selector{style: "list-style: inside;font-family:Quicksand-Variable, sans-serif !important;"}
@@ -77,6 +77,8 @@
                           =image_tag '1.jpg', class: 'img-item item', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                           =image_tag '7.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
                           =image_tag '8.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag 'imagen1.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                          =image_tag 'imagen2.jpg', class: 'img-item item' , alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
     #brands.nt-section.section.pb-0{style: "padding-top: 0;"}
       .container
         .row.flex-md-row-reverse
@@ -85,17 +87,27 @@
               %span Ellos
               confían
               %span en nosotros
-            .row.vc_custom_1558361283045.justify-content-sm-around.align-items-center
-              .nt-column.col-6.col-md-3
+            .row.vc_custom_1558361283045.justify-content-sm-around.align-items-center.owl-carousel.owl-brands.pad-row
+              .item.nt-column
                 .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278271921.has-opacity
                   %figure.wpb_wrapper.vc_figure
                     .vc_single_image-wrapper.vc_box_border_grey
-                      =image_tag 'brands/conalvias.png', class: 'vc_single_image-img', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
-              .nt-column.col-6.col-md-3
+                      =image_tag 'brands/auction', class: 'img-brand vc_single_image-img', alt: 'aguilarconstrucciones', title: 'aguilarconstrucciones'
+              .item.nt-column
+                .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278271921.has-opacity
+                  %figure.wpb_wrapper.vc_figure
+                    .vc_single_image-wrapper.vc_box_border_grey
+                      =image_tag 'brands/sofan.jpg', class: 'img-brand vc_single_image-img', alt: 'sofaningenieria', title: 'sofaningenieria'
+              .item.nt-column
+                .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278271921.has-opacity
+                  %figure.wpb_wrapper.vc_figure
+                    .vc_single_image-wrapper.vc_box_border_grey
+                      =image_tag 'brands/conalvias.png', class: 'img-brand vc_single_image-img', alt: 'conalvias', title: 'conalvias'
+              .item.nt-column
                 .wpb_single_image.wpb_content_element.vc_align_center.vc_custom_1557278265574.has-opacity
                   %figure.wpb_wrapper.vc_figure
                     .vc_single_image-wrapper.vc_box_border_grey
-                      =image_tag 'brands/logo-dromos.png', class: 'vc_single_image-img', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+                      =image_tag 'brands/logo-dromos.png', class: 'img-brand vc_single_image-img', alt: 'dromospavimentos', title: 'dromospavimentos'
     #about.nt-section.section{:name => "about"}
       .container
         .row
@@ -626,9 +638,16 @@
   }
 
   summary{
-    display: inline list-item;
+    display: flex;
   }
 
+  summary::marker {
+  color: #000;
+  }
+
+  summary::-webkit-details-marker {
+    color: #000;
+  }
   details[open] summary ~ * {
     animation: sweep .5s ease-in-out;
   }
@@ -715,6 +734,26 @@
                 },
                 1000: {
                     items: 2
+                }
+            }
+        });
+
+
+        $('.owl-brands').owlCarousel({
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
                 }
             }
         });

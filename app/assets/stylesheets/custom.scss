@@ -39,6 +39,7 @@
   max-width: 90%;
   align-self: center;
   border-radius: 7px;
+  max-height: 485px;
 }
 
 .vc_custom_1559092219520 {
@@ -920,9 +921,27 @@ input#coupon_code {
 }
 
 
+.img-brand{
+  max-width: 80%;
+  // height: 100px;
+}
+
+
 //here
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+  .img-item.item {
+    max-height: 300px;
+  }
+
+  .img-brand{
+    max-height: 100px;
+  }
+
+  .pad-row{
+    padding-left: 65px;
+  }
 
   #selector{
     font-size: 14.1px;
