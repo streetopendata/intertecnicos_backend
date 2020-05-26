@@ -915,9 +915,18 @@ input#coupon_code {
   margin-left: 30px;
 }
 
+#selector{
+  font-size: 16px;
+}
+
+
 //here
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+  #selector{
+    font-size: 14.1px;
+  }
 
   .img-logo-style{
     margin: 13px 0px 10px 3px;
