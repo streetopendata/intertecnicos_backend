@@ -1042,3 +1042,34 @@ input#coupon_code {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+
+
+
+
+  .item.review__item.review__item--rounded.review__item--shadow.mmgbbd {
+      padding: 14px 20px;
+      min-height: auto !important;
+  }
+
+  summary{
+   display: -webkit-flex; /* NEW */
+   display: flex;
+   -webkit-flex-wrap: wrap; /* NEW */
+  }
+
+  summary::marker {
+  color: #000;
+  }
+
+  summary::-webkit-details-marker {
+    color: #000;
+  }
+  details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
