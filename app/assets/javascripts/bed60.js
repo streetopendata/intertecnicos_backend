@@ -14831,13 +14831,13 @@ var VanillaTilt = (function () {
     }
     function _tilt() {
         var nTilt = document.querySelectorAll(".js-tilt");
-        if (device.desktop() && nTilt.length > 0) {
+        if ( nTilt.length > 0) {
             VanillaTilt.init(nTilt);
         }
     }
     function _parallax() {
         var nJarallax = document.querySelectorAll(".jarallax");
-        if (device.desktop() && nJarallax.length > 0) {
+        if ( nJarallax.length > 0) {
             jarallax(nJarallax, { zIndex: -20 });
         }
     }
@@ -15057,7 +15057,7 @@ var VanillaTilt = (function () {
     }
     function _wavify() {
         var nWave = document.querySelectorAll(".js-wave");
-        if (device.desktop() && nWave.length > 0) {
+        if ( nWave.length > 0) {
             var defaultOptions = { height: 100, amplitude: 90, speed: 0.15, bones: 3, color: "rgba(255,255,255, 1)" };
             [].forEach.call(nWave, function (wave, index, arr) {
                 var element = wave.getElementsByTagName("path"),
