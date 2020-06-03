@@ -3,12 +3,10 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de diseño y montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores y mas.", :name => "description"}/
     %meta{:content => "Intertecnicos, ingeniería eléctrica, servicios  diseño  montaje instalaciones eléctricas,  subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores, redes eléctricas, fabricación de colectores, transformadores en baja tensión, voltajes especiales", :name => "keywords"}/
     %meta{:content => "Intertecnicos", :name => "author"}/
     %meta{:content => "Intertecnicos", :property => "og:title"}/
     %meta{:content => "ecommerce", :property => "og:type"}/
-    %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de diseño y montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores y mas.", :property => "og:description"}/
     %meta{:content => "https://intertecnicos.com/", :property => "og:url"}/
     %meta{:content => image_url("ogimage.png"), :property => "og:image"}/
 
@@ -21,7 +19,19 @@
     %link{:href => "https://intertecnicos.com/", :hreflang => "es", :rel => "alternate"}/
 
 
-    %title Intertecnicos servicios de ingeniería eléctrica
+    %title= "Intertecnicos #{ (!!defined? @titile) ? "| #{@titile}" : 'servicios de ingeniería eléctrica'}"
+    - if @meta.class == NilClass
+      %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de diseño y montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores y mas.", :name => "description"}/
+      %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de diseño y montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores y mas.", :property => "og:description"}/
+    - else
+      - @meta.each do |x|
+        %meta{:content => x[:content], :property => x[:property], :name => x[:property]}
+    
+
+
+
+
+
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'

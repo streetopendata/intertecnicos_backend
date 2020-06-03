@@ -6,6 +6,12 @@ class HomeController < ApplicationController
   end
 
   def engines
+    @titile= "Bobinado de motores, montaje de subestaciones e instalaciones electricas"
+    @meta = [{:content => "Bobinado de motores, venta de motores, mantenimiento electrico, tableros industriales.",
+            :property => "og:description"}, {:content => "Bobinado de motores, venta de motores, mantenimiento electrico, tableros industriales.",
+                    :property => "description"}]
+
+
   end
 
   def download_intertecnicos

@@ -28,6 +28,8 @@
                           / <li><a class=nav-link href="javascript:goTo('blog')">Blog</a></li>
                           %li
                             %a.nav-link{:href => "javascript:goTo('contact')"} Contacto
+                          %li
+                            = link_to "Motores", motores_electricos_url, :target => "_blank", class: 'nav-link'                            
                       #top-bar__action.top-bar__action
                         .d-xl-flex.flex-xl-row.flex-xl-wrap.align-items-xl-center
                           .top-bar__auth-btns

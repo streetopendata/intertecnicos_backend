@@ -931,10 +931,18 @@ input#coupon_code {
     display: none;
 }
 
+.engine-bg{
+  background-image: url(asset-path('motores-electricos.jpg'));
+}
 //here
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .engine-bg{
+    background-image: linear-gradient(to right top, #2dae2f, #00a77c, #0099b8, #0085d4, #0069c6);
+  }
+}
 
+@media only screen and (max-width: 600px) {
 
 
   .img-item.item {
@@ -1047,7 +1055,7 @@ input#coupon_code {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;  
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
