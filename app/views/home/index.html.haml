@@ -27,9 +27,9 @@
                             %a.nav-link{:href => "javascript:goTo('tell-us')"} Cuentanos
                           / <li><a class=nav-link href="javascript:goTo('blog')">Blog</a></li>
                           %li
-                            %a.nav-link{:href => "javascript:goTo('contact')"} Contacto
+                          = link_to "Motores", motores_electricos_url, :target => "_blank", class: 'nav-link'
                           %li
-                            = link_to "Motores", motores_electricos_url, :target => "_blank", class: 'nav-link'                            
+                            %a.nav-link{:href => "javascript:goTo('contact')"} Contacto
                       #top-bar__action.top-bar__action
                         .d-xl-flex.flex-xl-row.flex-xl-wrap.align-items-xl-center
                           .top-bar__auth-btns
