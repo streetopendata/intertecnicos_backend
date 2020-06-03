@@ -10,14 +10,8 @@
         .s-btns.s-btns--md.s-btns--light.s-btns--rounded
           %ul.d-flex.flex-row.flex-wrap.align-items-center.justify-content-lg-start
             %li.social-media
-              %a.f{:href => "#"}
-                %i.fontello-facebook
-            %li.social-media
               %a.y{:href => "#"}
                 %i.fontello-linkedin
-            %li.social-media
-              %a.i{:href => "#"}
-                %i.fontello-instagram
       .z-index-3.nt-column.col-sm-12.col-lg-4.col-md-5.col-12
         .spacer.py-4.d-lg-none
         %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"} Contacto
@@ -30,11 +24,14 @@
                 Carrera 74b 64f-20, Bogotá
               %li
                 %i.__ico.fontello-mail-1
-                %a{:href => "mailto:info@intertecnicos.com"}
+                %a{style: 'color: #fff', :href => "mailto:info@intertecnicos.com"}
                   %span.__cf_email__ info@intertecnicos.com
               %li
                 %i.__ico.fontello-phone
-                %a{:href => "https://web.whatsapp.com/send?phone=573115412451"} +573115412451
+                %a{style: 'color: #fff', :href => "https://web.whatsapp.com/send?phone=573115412451"} +573115412451
+              %li
+                %i.__ico.fontello-phone{style: 'margin-right: 10px;'}
+                %a{ style: 'color: #fff', :href => "#", target: '_blank'} 7967490
       .z-index-4.nt-column.col-sm-12.col-lg-4.col-md-7.col-12
         .spacer.py-4.d-lg-none
         %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"}

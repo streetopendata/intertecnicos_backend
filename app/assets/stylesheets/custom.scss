@@ -927,9 +927,15 @@ input#coupon_code {
 }
 
 
+.js-side-menu-open {
+    display: none;
+}
+
 //here
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+
 
   .img-item.item {
     max-height: 300px;
@@ -1054,7 +1060,7 @@ input#coupon_code {
 
   summary{
    display: -webkit-flex; /* NEW */
-   display: flex;   
+   display: flex;
   }
 
   summary::marker {

@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   def sedes
   end
 
+  def engines
+  end
+
   def download_intertecnicos
     send_file(
       "#{Rails.root}/public/intertecnicos.zip",

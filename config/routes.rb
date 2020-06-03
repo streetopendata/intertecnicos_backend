@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   devise_for :customers
   devise_for :admins
@@ -5,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'sedes-personal', to: 'home#sedes'
+  get 'motores-electricos', to: 'home#engines'
   get 'personal(.:format)', to: 'devise/registrations#new'
 
   get 'store', to: 'store#index'

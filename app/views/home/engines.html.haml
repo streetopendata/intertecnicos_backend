@@ -1,0 +1,120 @@
+%head
+  :css
+    p{
+        text-align: justify;
+    }
+%body
+  #app
+    #btn-to-top-wrap
+      %a#btn-to-top.circled{"data-visible-offset" => "800", :href => "javascript:void(0);"}
+    %main
+      = render 'layouts/header_clean'
+      #home.nt-section{:name => "home"}
+        .container-fluid.pl-0.pr-0
+          .row.no-gutters
+            .nt-column.col-sm-12
+              #start-screen.start-screen.start-screen--full-height.start-screen--style-7{:style => "padding-top: 0px !important; margin-top: 100px !important;"}
+                .start-screen__bg-container
+                  .start-screen__bg{:style => "background-image: url(../wp-content/uploads/2019/05/bg_1-2.jpg);background-position: left top;"}
+                .start-screen__content-container
+                  .start-screen__content__item.align-items-center{style: "margin-top: 0;padding-top: 0;"}
+                    .container
+                      .row
+                        .col-12.col-md-10.col-lg-6
+                          %h6.__subtitle{:style => "color: #008A78; font-weight: 500;  "} Ofrecemos servicio a toda colombia
+                          %h2
+                            %span.allittleText{:style => "font-weight: bold; font-weight: 600;"}  BOBINADO, REPARACIÓN, MANTENIMIENTO Y VENTA DE MOTORES ELÉCTRICOS
+                          %p
+                            Intertecnicos  es una  compañía especializada en el bobinado, reparación y mantenimiento de motores de corriente alterna y continua nuestro equipo está  equipo altamente capacitado y como objetivo brindar el mejor servicio  siempre cumpliendo con todos los estándares de calidad.
+                          %hr/
+                          %p
+                          %ul#selector{style: "list-style: inside;font-family:Quicksand-Variable, sans-serif !important;"}
+                            %li Bobinados de motores eléctricos.
+                            %li Reparación de plantas electricas y generadores.
+                            %li Mantenimiento preventivo y correctivo de motores eléctricos y plantas eléctricas.
+                            %li Venta de motores monofasicos y trifasicos.
+
+                          -# %br/
+                          -# .row.mb-adj
+                          -#   .col-md-6.col-sm-12
+                          -#     = link_to "Información de sedes y de personal", "home/download_intertecnicos", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1 mb-adj-bt',  :download => "Intertecnicos"
+                          -#   .col-md-6.col-sm-12
+                          -#     = link_to "Plan de Manejo de Demanda Segura", "home/download_file", :format => 'zip' , class: 'custom-btn custom-btn--big custom-btn--style-1 mb-adj-bt',  :download => "Intertecnicos"
+
+                        .col-12.col-md-10.col-lg-6
+                          .owl-carousel.owl-inicio{:style => "margin-left: 30px;"}
+                            =image_tag 'engines/motores-electricos.jpg', class: 'img-item item', alt: 'mantenimientos para redes eléctricas', title: 'motores electricos'
+                            =image_tag 'engines/mantenimiento-de-motores.jpg', class: 'img-item item', alt: 'mantenimiento de subestaciones', title: 'mantenimiento de motores'
+                            =image_tag 'engines/bobinado-de-motores.jpg', class: 'img-item item', alt: 'mantenimiento de subestaciones', title: 'bobinado de motores'
+
+      #contact.nt-section.section{:name => "blog", :style => "background-image: url(#{image_url('motores-electricos.jpg')});", :class => 'bg-img-algo' }
+        .container
+          .row.justify-content-lg-between.align-items-md-center
+            .nt-column.col-sm-12.col-lg-5.col-md-7.col-12
+              .start-screen__content-form.js-contact-form
+                %h6.__subtitle{:style => "color: #008A78;  "} Contactanos
+                %h3 Nuestro propósito es establecer un canal de comunicación claro y efectivo con nuestros clientes
+                %p.mb-6 Por eso ponemos a su disposición canales  de Contacto a través de los cuales brindamos atención personalizada técnica y comercial.
+                %ul{:style => "margin-bottom: 35px;"}
+                  %li{style: 'margin-bottom: 25px;'}
+                    %a.contact-info{:href => "mailto:info@intertecnicos.com", :target => "_blank"}
+                      %i.fa.fa-envelope{:style => "margin-right: 18px;font-size: 20px;align-self: center;;"}
+                      info@intertecnicos.com
+                  %li
+                    %a.contact-info{:href => "https://api.whatsapp.com/send?phone=573115412451", :target => "_blank"}
+                      %i.fa.fa-whatsapp{:style => "margin-right: 18px;font-size: 20px;align-self: center;;"}
+                      +573115412451
+                #wpcf7-f563-p1468-o1.wpcf7{:dir => "ltr", :lang => "en-US", :role => "form"}
+                  .screen-reader-response
+                  %form#frmSm.wpcf7-form{:action => "#", :method => "post", :novalidate => "novalidate"}
+                    %div{:style => "display: none;"}
+                      %input{:name => "_wpcf7", :type => "hidden", :value => "563"}/
+                      %input{:name => "_wpcf7_version", :type => "hidden", :value => "5.1.6"}/
+                      %input{:name => "_wpcf7_locale", :type => "hidden", :value => "en_US"}/
+                      %input{:name => "_wpcf7_unit_tag", :type => "hidden", :value => "wpcf7-f563-p1468-o1"}/
+                      %input{:name => "_wpcf7_container_post", :type => "hidden", :value => "1468"}/
+                    .input-wrp
+                      %span.wpcf7-form-control-wrap.text-74
+                        %input#compInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Compañía", :size => "40", :type => "text", :value => ""}/
+                    .input-wrp
+                      %span.wpcf7-form-control-wrap.text-74
+                        %input#nomInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Nombre completo", :size => "40", :type => "text", :value => ""}/
+                    .input-wrp
+                      %span.wpcf7-form-control-wrap.email-362
+                        %input#emailInp.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "email-362", :placeholder => "Email  corporativo", :size => "40", :type => "email", :value => ""}/
+                    .input-wrp
+                      %span.wpcf7-form-control-wrap.text-74
+                        %input#phoneInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Número de celular.", :size => "40", :type => "text", :value => ""}/
+                    .input-wrp
+                      %span.wpcf7-form-control-wrap.text-74
+                        %textarea#messInp.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "¿Cómo te podemos ayudar?", :size => "40", :type => "text", :value => ""}
+                    %p
+                      %input.wpcf7-form-control.wpcf7-submit.custom-btn.custom-btn--medium.custom-btn--style-1.wide{:type => "submit", :value => "Enviar"}/
+                      %span.ajax-loader
+                    .wpcf7-response-output.wpcf7-display-none
+            .nt-column.col-sm-12.col-lg-6.col-md-5.col-12
+              .spacer.py-5.d-md-none
+
+      = render 'layouts/footer'
+:javascript
+  $(document).ready(function(){
+
+        $('.owl-inicio').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+
+  })
