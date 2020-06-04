@@ -19,14 +19,14 @@
     %link{:href => "https://intertecnicos.com/", :hreflang => "es", :rel => "alternate"}/
 
 
-    %title= "Intertecnicos #{ (!!defined? @titile) ? "| #{@titile}" : 'servicios de ingeniería eléctrica'}"
+    %title= "Intertecnicos #{ (!!defined? @titile) ? "| #{@titile}" : '| Bobinado de motores, montaje de subestaciones e instalaciones electricas'}"
     - if @meta.class == NilClass
       %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de diseño y montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores y mas.", :name => "description"}/
       %meta{:content => "Intertecnicos dedicada a la ingeniería eléctrica especializada en servicios de diseño y montaje de instalaciones y subestaciones eléctricas, mantenimiento de equipos eléctricos, bobinado de motores y mas.", :property => "og:description"}/
     - else
       - @meta.each do |x|
         %meta{:content => x[:content], :property => x[:property], :name => x[:property]}
-    
+
 
 
 
