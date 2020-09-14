@@ -14,7 +14,7 @@ set :branch, "master"
 # set :format, :airbrussh
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public')
-set :linked_files, fetch(:linked_files, []).push('.env', 'config/master.key')
+set :linked_files, fetch(:linked_files, []).push('.env')
 set :rbenv_ruby, '2.5.1'
 
 # You can configure the Airbrussh format using :format_options.
