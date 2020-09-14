@@ -58,6 +58,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     bcrypt (3.1.13)
+    bcrypt_pbkdf (1.0.1)
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
@@ -114,6 +115,7 @@ GEM
       responders
       warden (~> 1.2.3)
     e2mmap (0.1.0)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     et-orbi (1.2.4)
       tzinfo
@@ -295,6 +297,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate!
+  bcrypt_pbkdf (~> 1.0)
   bootsnap (>= 1.1.0)
   byebug
   capistrano (~> 3.11.0)
@@ -307,6 +310,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.2)
+  ed25519 (~> 1.2)
   haml
   jbuilder (~> 2.5)
   jquery-rails
