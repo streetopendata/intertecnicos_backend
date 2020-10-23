@@ -1,0 +1,23 @@
+%footer#footer
+  .container
+    %p
+      The LINES blog engine is created by
+      %a{:href => "https://www.opoloo.com"} Opoloo
+      and improved by the open source community on
+      = succeed "." do
+        %a{:href => "https://github.com/opoloo/lines-engine"} Github
+    %p
+      We’re thankful to be using the following technologies:
+      = succeed "," do
+        %a{:href => "http://rubyonrails.org/"} Ruby on Rails
+      = succeed "," do
+        %a{:href => "http://pygments.org/"} Pygments
+      = succeed "," do
+        %a{:href => "http://jquery.com/"} jQuery
+      = succeed "," do
+        %a{:href => "http://codemirror.com/"} CodeMirror
+      = succeed "." do
+        %a{:href => "https://github.com/vmg/redcarpet"} Red Carpet
+    %p
+      Download the LINES gem at
+      %a{:href => "https://rubygems.org/gems/lines-engine"} https://rubygems.org/gems/lines-engine
