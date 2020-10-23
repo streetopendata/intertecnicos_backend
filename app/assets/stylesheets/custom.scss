@@ -38,10 +38,9 @@
 .img-item.item {
   max-width: 90%;
   align-self: center;
-  border-radius: 7px;
+  border-radius: 3px;
   max-height: 485px;
 }
-
 .vc_custom_1559092219520 {
   background-color: #f9fbfc !important;
 }
@@ -896,8 +895,8 @@ input#coupon_code {
 }
 
 .contact-info {
-  color: #00A662;
-  font-size: 3rem;
+  color: #007dc6;
+  font-size: 2.2rem;
   display: flex;
   text-decoration: none;
 }
@@ -1039,7 +1038,9 @@ input#coupon_code {
       &.activeTabL {
         border: solid 1px #fff;
         padding: 6px 8px;
-        border-radius: 7px;
+        border-radius: 7px;                   
+        background: #fff;
+        color: $inter_blue;
       }
     }
   }
@@ -1089,3 +1090,33 @@ input#coupon_code {
     0%    {opacity: 0; margin-left: -10px}
     100%  {opacity: 1; margin-left: 0px}
   }
+
+
+  .subsubTitle{
+    font-size: 25px;
+  }
+
+
+  .desC{
+    text-align: justify;
+  }
+
+
+  
+.whatsapp {
+  position:fixed;
+  width:45px;
+  height:45px;
+  bottom:25px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.whatsapp-icon {
+  margin-top: 0;
+}

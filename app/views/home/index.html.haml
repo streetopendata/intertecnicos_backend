@@ -1,6 +1,4 @@
 #app
-  #btn-to-top-wrap
-    %a#btn-to-top.circled{"data-visible-offset" => "800", :href => "javascript:void(0);"}
   %main
     .nt-section
       .container-fluid.pl-0.pr-0
@@ -39,7 +37,7 @@
                             - else
                               -# = link_to "Ir a la tienda", new_customer_session_path, :target => " _blank"
                             %a{:href => "./sedes-personal", :style => "color:tomato;", :target => " _blank"} Covid-19
-                            %a.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "javascript:goTo('contact')"} Escribenos
+                            %a.custom-btn.custom-btn--medium.green-solid{:href => "javascript:goTo('contact')"} Escribenos
                           .top-bar__side-menu-button.js-side-menu-open
                             %span.line
                             %span.line
@@ -56,36 +54,36 @@
                   .container
                     .row
                       .col-12.col-md-10.col-lg-6
-                        %h6.__subtitle{:style => "color: #008A78; font-weight: 500; "} Un equipo altamente calificado de ingenieros y tècnicos  que hace crecer tu compañía.
+                        %h6.__subtitle{:style => "color: #00747f; font-weight: 500; "} Un equipo altamente calificado de ingenieros y tècnicos  que hace crecer tu compañía.
                         %h1{style: "font-size: 4rem; margin-bottom: 0;"}
-                          %span.allittleText{:style => "font-weight: bold; font-weight: 600;"} Mantenimiento eléctrico industrial y residencial
+                          %span.allittleText{:style => "font-weight: bold; font-weight: 600; color: #007dc6;"} Mantenimiento eléctrico industrial y residencial
                           %br/
                           %span.txt-rotate{"data-period" => "1000", "data-rotate" => "[ \"Subestaciones eléctricas en media y baja tensión.\", \" Redes eléctricas de baja y media tensión.\", \"Energías renovables.\"]"}
                         %p
                           %strong
-                            %span{:style => "color: #008A78;  "} Intertecnicos Ltda.
+                            %span{:style => "color: #007dc6;  "} Intertecnicos Ltda.
                           es una compañía especializada en diseño, planeación, gestión y ejecución  de proyectos del sector eléctrico industrial, comercial y residencial.
-                        %hr/
-                        %p
-                          %ul#selector{style: "list-style: inside;font-family:Quicksand-Variable, sans-serif !important;"}
-                            %li Suministro, montaje, pruebas y mantenimiento de subestaciones.
-                            %li Asesoría, diseño, instalaciones y mantenimientos para redes eléctricas.
-                            %li Suministro, Mantenimiento y bobinado de motores eléctricos.
-                        .spacer.py-2.py-sm-4
-                        %a.custom-btn.custom-btn--big.custom-btn--style-1{:href => "javascript:goTo('services')"} Saber mas
+                        %hr/                       
+                        .spacer
+                        %a.custom-btn.custom-btn--big.blue-solid{:href => "javascript:goTo('services')"} Saber mas
                       .col-12.col-md-10.col-lg-6
                         .owl-carousel.owl-inicio{:style => "margin-left: 30px;"}
-                          =image_tag 'instalaciones-electricas.jpg', class: 'img-item item', alt: 'mantenimientos para redes eléctricas', title: 'mantenimientos para redes eléctricas'
-                          =image_tag 'suministro-subestaciones.jpg', class: 'img-item item', alt: 'mantenimiento de subestaciones', title: 'mantenimiento de subestaciones'
-                          =image_tag 'instalaciones-electricas-residensiales.jpg', class: 'img-item item' , alt: 'instalaciones de redes eléctricas', title: 'instalaciones de redes eléctricas'
-                          =image_tag 'diseno-proyectos-electricos.jpg', class: 'img-item item' , alt: ' Asesoría y diseño para redes eléctricas', title: ' Asesoría y diseño para redes eléctricas'
-                          =image_tag 'tableros-control-fuerza.jpg', class: 'img-item item' , alt: 'mantenimientos para tableros', title: 'mantenimientos para tableros'
-                          =image_tag 'bobinado-motores.jpg', class: 'img-item item' , alt: 'Suministro, Mantenimiento y bobinado de motores eléctricos', title: 'Suministro, Mantenimiento y bobinado de motores eléctricos'
+                          =image_tag 'motores-electricos-apilados.png', class: 'img-item item', alt: 'mantenimientos para redes eléctricas', title: 'mantenimientos para redes eléctricas'
+                          =image_tag 'carousel/bobinado-de-motores.png', class: 'img-item item', alt: 'mantenimientos para redes eléctricas', title: 'mantenimientos para redes eléctricas'
+                          =image_tag 'carousel/cableado-industrial.png', class: 'img-item item', alt: 'mantenimiento de subestaciones', title: 'mantenimiento de subestaciones'
+                          =image_tag 'carousel/motor-interno.png', class: 'img-item item' , alt: 'instalaciones de redes eléctricas', title: 'instalaciones de redes eléctricas'
+                          =image_tag 'carousel/obras-redes.png', class: 'img-item item' , alt: ' Asesoría y diseño para redes eléctricas', title: ' Asesoría y diseño para redes eléctricas'
+                          =image_tag 'carousel/plannig.png', class: 'img-item item' , alt: 'mantenimientos para tableros', title: 'mantenimientos para tableros'
+                          =image_tag 'carousel/redes-electricas.png', class: 'img-item item' , alt: 'Suministro, Mantenimiento y bobinado de motores eléctricos', title: 'Suministro, Mantenimiento y bobinado de motores eléctricos'
+                          =image_tag 'carousel/redes.png', class: 'img-item item' , alt: 'Suministro, Mantenimiento y bobinado de motores eléctricos', title: 'Suministro, Mantenimiento y bobinado de motores eléctricos'
+                          =image_tag 'carousel/tableros-electricos.png', class: 'img-item item' , alt: 'Suministro, Mantenimiento y bobinado de motores eléctricos', title: 'Suministro, Mantenimiento y bobinado de motores eléctricos'
+                          =image_tag 'carousel/tableros-electronicos.png', class: 'img-item item' , alt: 'Suministro, Mantenimiento y bobinado de motores eléctricos', title: 'Suministro, Mantenimiento y bobinado de motores eléctricos'
+
     #brands.nt-section.section.pb-0{style: "padding-top: 0;"}
       .container
         .row.flex-md-row-reverse
           .nt-column.col-sm-12
-            %h2.text-center
+            %h2.text-center.pt-30.pb-60
               %span Ellos
               confían
               %span en nosotros
@@ -115,7 +113,7 @@
         .row
           .nt-column.col-sm-12.col-lg-6.col-12
             .section-heading.section-heading--dark
-              %h6.__subtitle{:style => "color:#008A78;  "} Acerca de nosotros
+              %h6.__subtitle.subTi Acerca de nosotros
               %h2.__title
                 Tus proyectos
                 %br/
@@ -126,13 +124,13 @@
                 %p
                   Somos una compañía con  más 15 años en el mercado, ejecutando proyectos por todo el país, ofreciendo soluciones orientadas a cubrir las necesidades de la industria colombiana con la mayor calidad, brindando asesoría 360 grados, soporte técnico y la calidad como nuestra garantía.
             .nt_btn_6547.mt-9
-              %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "https://api.whatsapp.com/send?phone=573115412451&text=Hola%20me%20gustaría%20agendar%20una%20asesoría%20con%20Intertecnicos%20para%20mi%20proyecto", :target => "_blank"} Agendar asesoria
+              %a.nt-btn.custom-btn.custom-btn--medium.blue-solid{:href => "https://api.whatsapp.com/send?phone=573115412451&text=Hola%20me%20gustaría%20agendar%20una%20asesoría%20con%20Intertecnicos%20para%20mi%20proyecto", :target => "_blank"} Agendar asesoria
           .nt-column.col-sm-12.col-lg-6.col-12.text-center.text-md-left
             .spacer.py-5.d-lg-none
             .video-box.video-box--s2
               = image_tag("servicios-electricos.jpg", class: 'imgService', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen')
     / NEW SERVICES
-    #services.nt-section.section.vc_custom_1564323430175.nt-has-fill.nt_section_158099{"data-res-css" => ".nt_section_158099{background-image: linear-gradient(to right top, #2dae2f, #00a77c, #0099b8, #0085d4, #0069c6);}", :name => "services"}
+    #services.nt-section.section.nt-has-fill.blue-solid{ :name => "services"}
       .container
         %h2.text-center{:style => "color: #fff;"}
           %span Nuestros
@@ -330,7 +328,7 @@
         .row
           .nt-column.col-sm-12
             .section-heading.section-heading--center.section-heading--dark
-              %h6.__subtitle{:style => "color: #008A78;  "} ¿Por qué elegirnos?
+              %h6.__subtitle.subTi ¿Por qué elegirnos?
               %h2.__title
                 Porque la industria necesita a los mejores en sus proyectos
               .__description
@@ -345,7 +343,7 @@
                         %span.__ico
                           = image_tag 'rayo.svg', alt: 'Rayo', title: 'Rayo'
                     %h4.__title Experiencia
-                    %p Desde nuestra fundación en el 2005 trabajamos para proveer al cliente el mejor servicio.
+                    %p.desC Desde nuestra fundación en el 2005 trabajamos para proveer al cliente el mejor servicio.
               .nt-column.col-sm-9.col-lg-3.col-md-3.col-12.d-sm-flex
                 .steps.steps--s1.steps-309
                   .__item
@@ -354,7 +352,7 @@
                         %span.__ico
                           = image_tag 'rayo.svg', alt: 'Rayo', title: 'Rayo'
                     %h4.__title Lideres
-                    %p
+                    %p.desC
                       Nuestro objetivo es liderar en el mercado de diseño,montaje y mantenimiento en el sector eléctrico.
               .nt-column.col-sm-9.col-lg-3.col-md-3.col-12.d-sm-flex
                 .steps.steps--s1.steps-704
@@ -364,16 +362,16 @@
                         %span.__ico
                           = image_tag 'rayo.svg', alt: 'Rayo', title: 'Rayo'
                     %h4.__title Compromiso
-                    %p Tenemos como  visión destacar en la industria colombiana, persiguiendo la excelencia y demostrando la calidad de nuestro servicio.
+                    %p.desC Tenemos como  visión destacar en la industria colombiana, persiguiendo la excelencia y demostrando la calidad de nuestro servicio.
               .text-center.nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
-                %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "tel:+573115412451"}
+                %a.nt-btn.custom-btn.custom-btn--medium.blue-solid{:href => "tel:+573115412451"}
                   Llamar ahora
     #tell-us.nt-section.section.vc_custom_1558746900193.nt-has-fill.section--bg-img{:name => "tell-us"}
       .container
         .row
           .nt-column.col-sm-12
             .section-heading.section-heading--center.section-heading--dark
-              %h6.__subtitle{:style => "color: #008A78;  "} Amigables con la industria
+              %h6.__subtitle.subTi Amigables con la industria
               %h2.__title
                 Recogemos a domicilio tus equipos
                 %span o enviamos un técnico
@@ -390,24 +388,24 @@
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-948.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
                   =image_tag 'one.svg',style: "max-width: 40%;", alt: 'Recogemos los equipos', title: 'Recogemos los equipos'
                   .__body.pt-8.pb-9
-                    %p Recogemos los equipos o enviamos uno de nuestros técnicos en la fecha agendada y dirección indicada
+                    %p.desC Recogemos los equipos o enviamos uno de nuestros técnicos en la fecha agendada y dirección indicada
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-569.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
                   =image_tag 'two.svg',style: "max-width: 40%;", alt: 'Hacemos una revisión detallada', title: 'Hacemos una revisión detallada'
                   .__body.pt-8.pb-9
-                    %p Hacemos una revisión detallada y te entregamos un informe del estado del mismo.
+                    %p.desC Hacemos una revisión detallada y te entregamos un informe del estado del mismo.
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-248.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
                   =image_tag 'three.svg',style: "max-width: 40%;", alt: 'realizamos la reparación o mantenimiento', title: 'realizamos la reparación o mantenimiento'
                   .__body.pt-8.pb-9
-                    %p Posterior a tu aprobación realizamos la reparación o mantenimiento a tus equipos
+                    %p.desC Posterior a tu aprobación realizamos la reparación o mantenimiento a tus equipos
               .nt-column.col-sm-9.col-lg-3.col-md-6.col-12.d-sm-flex
                 .pricing-table.pricing-table--s1.__item.__item--rounded.pricing-248.js-tilt{"data-tilt-max" => "25", "data-tilt-perspective" => "1000", "data-tilt-speed" => "800"}
                   =image_tag 'four.svg',style: "max-width: 40%;", alt: 'Entregamos en tus instalaciones!', title: 'Entregamos en tus instalaciones!'
                   .__body.pt-8.pb-9
-                    %p Entregamos en tus instalaciones!
+                    %p.desC Entregamos en tus instalaciones!
               .text-center.nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
-                %a.nt-btn.custom-btn.custom-btn--medium.custom-btn--style-3{:href => "https://api.whatsapp.com/send?phone=573115412451&text=Hola%20me%20gustaría%20agendar%20un%20servicio", :target => "_blank"}
+                %a.nt-btn.custom-btn.custom-btn--medium.blue-solid{:href => "https://api.whatsapp.com/send?phone=573115412451&text=Hola%20me%20gustaría%20agendar%20un%20servicio", :target => "_blank"}
                   Agenda tu servicio
               .row
                 .nt-column.col-sm-12.col-lg-12.col-md-12.col-12.d-sm-flex{:style => "align-content: center;align-items: center;justify-content: center;"}
@@ -520,9 +518,9 @@
     #contact.nt-section.section{:name => "blog", :style => "background-image: url(#{image_url('contacto.jpg')});", :class => 'bg-img-algo' }
       .container
         .row.justify-content-lg-between.align-items-md-center
-          .nt-column.col-sm-12.col-lg-5.col-md-7.col-12
+          .nt-column.col-sm-12.col-lg-5.col-md-7.col-12 
             .start-screen__content-form.js-contact-form
-              %h6.__subtitle{:style => "color: #008A78;  "} Contactanos
+              %h6.__subtitle.subTi Contactanos
               %h3 Nuestro propósito es establecer un canal de comunicación claro y efectivo con nuestros clientes
               %p.mb-6 Por eso ponemos a su disposición canales  de Contacto a través de los cuales brindamos atención personalizada técnica y comercial.
               %ul{:style => "margin-bottom: 35px;"}
@@ -565,6 +563,8 @@
           .nt-column.col-sm-12.col-lg-6.col-md-5.col-12
             .spacer.py-5.d-md-none
     #footer-widgetarea.nt-section.pt-60.pb-75.footer.footer--s4.footer--color-light.vc_custom_1558951260637.nt-has-fill
+      %a.whatsapp{:href => "https://api.whatsapp.com/send?phone=573003375431&text=Hola,%20quiero%20una%20cotizaci%C3%B3n%20de%20los%20siguientes%20productos", :target => "_blank"}
+        %i.fa.fa-whatsapp.whatsapp-icon
       .container
         .row
           .z-index-2.nt-column.col-sm-12.col-lg-4.col-md-8.col-12

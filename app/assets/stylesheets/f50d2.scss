@@ -3,6 +3,39 @@
 * Copyright 2011-2019 Twitter, Inc.
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*/
 
+$inter_blue:  #007dc6;
+$inter_green:  #2dae2f;
+
+h6.__subtitle.subTi {
+    font-size: 20px;
+    color: $inter_blue !important;
+}
+
+
+.green-text {
+  color: $inter_green;
+}
+
+p{
+  color: #333333;
+}
+.green-solid {
+  background-color: $inter_green;
+  color: #fff ;
+  border: none;
+}
+
+
+.blue-text {
+  color: $inter_blue;
+}
+.blue-solid {
+  background-color: $inter_blue;
+  color: #fff ;
+  border: none;
+}
+
+
 :root {
   --blue:#007bff;
   --indigo:#6610f2;
@@ -20928,7 +20961,7 @@ body {
   font-size: 1.8rem;
   font-family: -apple-system, BlinkMacSystemFont, nunito sans, sans-serif;
   font-weight: 400;
-  color: #888;
+  color: #333333;
   background-color: #fff;
 }
 
@@ -21024,7 +21057,8 @@ ol, ul {
 
 .h6, h6 {
   font-size: 1.3rem;
-  text-transform: uppercase;
+  text-transform: none;
+  font-weight: 700 !important;
 }
 
 main {
@@ -21065,7 +21099,7 @@ a {
 .section-heading {
   line-height: 1.4;
   font-size: 1.8rem;
-  color: #888;
+  color: #333333;
 
   .__title:first-child {
     margin-top: -0.2em;
@@ -21429,6 +21463,7 @@ a {
   a {
     &:not(.custom-btn) {
       position: relative;
+      color: $inter_blue;
       display: inline-block;
       padding: 0;
       line-height: inherit;
@@ -22161,9 +22196,9 @@ form {
   }
 
   .textfield--grey {
-    background-color: #f2f2f2;
-    border-color: #f2f2f2;
+    background-color: #fffdfd;
     color: #5d5d5d;
+    border: solid 1px $inter_blue;
 
     &.focus, &:focus {
       background-color: #fff;
@@ -22187,7 +22222,7 @@ form {
   }
 
   input.textfield {
-    height: 54px;
+    height: 54px;  
   }
 
   textarea {
