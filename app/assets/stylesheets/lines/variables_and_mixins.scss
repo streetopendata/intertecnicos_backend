@@ -18,6 +18,10 @@ $MerriweatherSans: 'Merriweather Sans', 'Helvetica', 'Arial', sans-serif;
 $Merriweather: 'Merriweather', 'Georgia', serif;
 $Monospace: 'Fira mono', monospace;
 
+$inter_blue:  #007dc6;
+$inter_green:  #2dae2f;
+
+
 @mixin addTransition($x) {
   transition: all $x+s ease;
   -o-transition: all $x+s ease;
