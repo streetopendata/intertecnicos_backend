@@ -1,9 +1,0 @@
-.rss
-  = link_to image_tag("ic_rss.png"), articles_url(format: "atom")
-#articles
-  = render partial: 'article_small', locals: { article_small: @first_article, article_class: 'first', article_counter: -1 } unless @first_article.nil?
-  = render partial: 'article_collection', collection: @articles
-- if @articles.total_pages > 1
-  %hr/
-  #pagination
-    = paginate @articles, outer_window: 1, window: 2, theme: 'lines'
