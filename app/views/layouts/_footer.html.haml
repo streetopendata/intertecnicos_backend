@@ -1,51 +1,64 @@
 #footer-widgetarea.nt-section.pt-60.pb-75.footer.footer--s4.footer--color-light.vc_custom_1558951260637.nt-has-fill
-  .container-fuid
+  %a.whatsapp{:href => "https://api.whatsapp.com/send?phone=573003375431&text=Hola,%20quiero%20una%20cotizaci%C3%B3n%20de%20los%20siguientes%20productos", :target => "_blank"}
+    %i.fa.fa-whatsapp.whatsapp-icon
+  .container
     .row
-      .z-index-2.nt-column.col-sm-12.col-lg-4.col-md-8.col-12
+      .z-index-2.nt-column.col-sm-12.col-lg-4
         .wpb_single_image.wpb_content_element.vc_align_left
           %figure.wpb_wrapper.vc_figure
             .vc_single_image-wrapper.vc_box_border_grey
-              =image_tag 'logo_white.png', class: 'vc_single_image-img'
-        .spacer.py-4
-        .s-btns.s-btns--md.s-btns--light.s-btns--rounded
-          %ul.d-flex.flex-row.flex-wrap.align-items-center.justify-content-lg-start
-            %li.social-media
-              %a.y{:href => "#"}
-                %i.fontello-linkedin
-      .z-index-3.nt-column.col-sm-12.col-lg-4.col-md-5.col-12
-        .spacer.py-4.d-lg-none
-        %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"} Contacto
-        .wpb_text_column.wpb_content_element.vc_custom_1559258220252
-          .wpb_wrapper
-            %address.footer__address.footer__address--s2
-            %ul
-              %li
-                %i.__ico.fontello-location{style: 'margin-right: 10px;'}
-                Carrera 74b 64f-20, Bogotá
-              %li
-                %i.__ico.fontello-mail-1{style: 'margin-right: 5px;'}
-                %a{style: 'color: #fff', :href => "mailto:info@intertecnicos.com"}
-                  %span.__cf_email__ info@intertecnicos.com
-              %li
-                %i.__ico.fontello-phone{style: 'margin-right: 5px;'}
-                %a{style: 'color: #fff', :href => "https://web.whatsapp.com/send?phone=573115412451"} +573115412451
-              %li
-                %i.__ico.fontello-phone{style: 'margin-right: 5px;'}
-                %a{ style: 'color: #fff', :href => "tel:5717967490", target: '_blank'}+5717967490
-      .z-index-4.nt-column.col-sm-12.col-lg-4.col-md-7.col-12
-        .spacer.py-4.d-lg-none
-        %h4.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"}
+              =image_tag 'icons/logo_intertecnicos', class: 'vc_single_image-img', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen'
+        %h4.love-e.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"}
           We
           %i.fa.fa-heart{:style => "color: red;"}
           Engineering
+      .z-index-3.nt-column.col-sm-12.col-lg-2
+      .z-index-4.nt-column.col-sm-12.col-lg-6
+        .spacer.py-4.d-lg-none
+        %h3.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"} Contacto
+        .wpb_text_column.wpb_content_element.vc_custom_1559258220252
+          .row
+            .col-sm-12.col-md-6
+              .wpb_wrapper
+                %ul
+                  %li.li-footer
+                    = image_tag 'icons/address_marker', class: 'icon-footer', alt: 'Icon', title: 'icon'
+                    Carrera 74b 64f-20, Bogotá
+                  %li.li-footer
+                    = image_tag 'icons/mail', class: 'icon-footer', alt: 'Icon', title: 'icon'
+                    %a{ style: 'color: #fff', :href => "mailto:info@intertecnicos.com", target: '_blank'}
+                      %span.__cf_email__ info@intertecnicos.com
+                  %li.li-footer
+                    = image_tag 'icons/ws', class: 'icon-footer', alt: 'Icon', title: 'icon'
+                    %a{ style: 'color: #fff', :href => "https://api.whatsapp.com/send?phone=573115412451", target: '_blank'} +573115412451
+            .col-sm-12.col-md-6
+              .wpb_wrapper.rigth-footer
+                %ul
+                  %li.li-footer
+                    = image_tag 'icons/phone', class: 'icon-footer', alt: 'Icon', title: 'icon'
+                    %a{ style: 'color: #fff', :href => "tel:573115412451", target: '_blank'}
+                      +5717967490
+                  %li.li-footer
+                    = image_tag 'icons/in', class: 'icon-footer', alt: 'Icon', title: 'icon'
+                    %a{ style: 'color: #fff', :href => "https://www.linkedin.com/company/intertecnicos/", target: '_blank'}
+                      %span.__cf_email__ Intertecnicos
+                  %li.li-footer
+                    %strong.icon-footer NIT 
+                    201234569
+
+       
       .wpb_text_column.wpb_content_element.col-md-12
         .wpb_wrapper{:style => "display: flex;justify-content: space-between;margin-top: 30px;"}
-          %p
+          %p.text-white
             Copyright 2020
             %i.fa.fa-copyright
             %a.__dev{:href => "#", :rel => "noopener noreferrer", :target => "_blank"} Intertecnicos
-          %p{:style => "margin-top: 0;"}
+          %p.text-white{:style => "margin-top: 0;"}
             Desarrollado con
             %i.fa.fa-heart
             por
             %a.__dev{:href => "http://streetopendata.com/", :target => "_blank"} Street Open Data Lab
+
+
+
+
