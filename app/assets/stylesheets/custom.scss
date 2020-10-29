@@ -67,7 +67,7 @@ p {
 }
 
 .vc_custom_1558951260637 {
-  background-color: #005E73 !important;
+  background-color: #005e73 !important;
 }
 
 .vc_custom_1558361283045 {
@@ -1119,4 +1119,30 @@ input#coupon_code {
 
 .whatsapp-icon {
   margin-top: 0;
+}
+
+
+.rigth-footer{
+  align-items: flex-end;
+    display: flex;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.icon-footer {
+  max-width: 25px;
+  margin-right: 8px;
+}
+
+li.li-footer {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+
+.love-e{
+  display: flex;
+  justify-content: space-between;
 }
