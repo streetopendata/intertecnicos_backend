@@ -1,0 +1,137 @@
+@font-face {
+  font-display: swap;
+  font-family: Quicksand-Regular;
+  src: url(asset-path('fonts/Quicksand-Regular.ttf'));
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Quicksand-Bold;
+  src: url(asset-path('fonts/Quicksand-Bold.ttf'));
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Quicksand-Medium;
+  src: url(asset-path('fonts/Quicksand-Medium.ttf'));
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Quicksand-Variable;
+  src: url(asset-path('fonts/Quicksand-VariableFont_wght.ttf'));
+}
+
+
+.title-container {
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(2,116,112,0.3841911764705882) 60%, rgba(2,116,127,0.6334908963585435) 100%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.title-container  h1 a {
+    color: #ffffff;
+    text-align: left;
+}
+
+.title-container .article_header {
+    text-align: left;
+    color: #fff;
+}
+
+.title-container .article_header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 120%;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: Quicksand-Bold, sans-serif !important;
+}
+
+ .title-container .article_header h2 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 120%;
+    margin-top: 5px;
+}
+
+#share-button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 35px;
+    cursor: pointer;
+}
+
+.title-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    min-height: 95vh;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.author_name {
+    margin: 5vh 0;
+    text-transform: capitalize;
+    color: #02747f;
+    font-family: 'Quicksand-Variable';
+    font-size: 1.3em;
+}
+
+
+.article .article_content {
+    line-height: 1.9em;
+    text-align: justify;
+}
+
+
+.article .article_content h2 {
+    font-size: 2.0em;
+    font-family: 'Quicksand-Variable';
+}
+
+hr{
+    background-color: #02747f !important;
+    margin-bottom: 10px !important;
+}
+
+.article .article_footer {
+    margin: 2em 13%;
+    line-height: 130%;
+    font-family: 'Quicksand-regular';
+    color: #9793a0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.bg-related{
+    background-color:#f2f2f2 ;
+}
+
+
+h1.title-related {
+    font-family: 'Quicksand-regular';
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 30px;
+
+    strong{
+        font-weight: 700;
+        font-family: 'Quicksand-Bold';
+    }
+}

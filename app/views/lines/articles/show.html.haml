@@ -1,3 +1,9 @@
 = render @article, article_counter: -1
-#articles
-  = render partial: 'article_collection', collection: @related_articles
+.bg-related.pt-60
+  .container
+    %h1.title-related
+      Más entradas de
+      %strong
+        INTERTECNICOS
+    #articles
+      = render partial: 'article_collection', collection: @related_articles

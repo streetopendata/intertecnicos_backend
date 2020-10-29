@@ -25,19 +25,9 @@
       = render_navbar do
         = link_to t('lines.buttons.new_article').html_safe, new_admin_article_path, class: "btn btn-new-article highlight"
         = link_to t('lines.buttons.dashboard').html_safe, admin_articles_path, class: "btn btn-view-blog"
-      .spacer
     = render 'layouts/lines/markdown_cheatsheet'
     = render 'layouts/header_clean'
-    %header
-      #logo
-        %a{:href => "/"}
-          - if CONFIG[:logo].empty?
-            = CONFIG[:blog_name]
-          - else
-            %img{:alt => "#{CONFIG[:blog_name]}", :src => "#{CONFIG[:logo]}"}/
-      #lines
-        = CONFIG[:short_description].html_safe
-    .container
+    .wrapper
       = render 'lines/shared/flash'
       = yield
     = render 'layouts/footer'
