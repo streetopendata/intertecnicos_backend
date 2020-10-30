@@ -9,7 +9,7 @@
               %h2= article.sub_title
           .col-md-4
             = image_tag 'icons/share', alt: "Compartir #{article.title}", id: 'share-button'
-  .container
+  .container.container-blog
     .article.first
       .author_name
         %span by
@@ -22,7 +22,7 @@
           .article_document
             = link_to "Download #{article.document.file.filename}", article.document_url
       %hr/
-      .article_footer
+      .article_footer.container-blog
         Publicado en
         %span.published_at= article.published_at.to_date
         por #{display_article_authors(article, true)}

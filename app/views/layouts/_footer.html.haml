@@ -11,7 +11,7 @@
       .z-index-3.nt-column.col-sm-12.col-lg-2
       .z-index-4.nt-column.col-sm-12.col-lg-6
         .spacer.py-4.d-lg-none
-        %h3.vc_custom_heading.mt-0{:style => "color: #ffffff;text-align: left"} Contacto
+        %h3.vc_custom_heading.mt-0.footer-contact-label{:style => "color: #ffffff;text-align: left"} Contacto
         .wpb_text_column.wpb_content_element.vc_custom_1559258220252
           .row
             .col-sm-12.col-md-6
@@ -19,7 +19,8 @@
                 %ul
                   %li.li-footer
                     = image_tag 'icons/address_marker', class: 'icon-footer', alt: 'Icon', title: 'icon'
-                    Carrera 74b 64f-20, Bogotá
+                    %a{ style: 'color: #fff', :href => "#"}
+                      Carrera 74b 64f-20, Bogotá
                   %li.li-footer
                     = image_tag 'icons/mail', class: 'icon-footer', alt: 'Icon', title: 'icon'
                     %a{ style: 'color: #fff', :href => "mailto:info@intertecnicos.com", target: '_blank'}
@@ -39,8 +40,9 @@
                     %a{ style: 'color: #fff', :href => "https://www.linkedin.com/company/intertecnicos/", target: '_blank'}
                       %span.__cf_email__ Intertecnicos
                   %li.li-footer
-                    %strong.icon-footer NIT
-                    201234569
+                    %a{ style: 'color: #fff', :href => "#"}
+                      %strong.icon-footer NIT
+                      201234569
 
 
       .wpb_text_column.wpb_content_element.col-md-12
