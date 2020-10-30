@@ -51,6 +51,21 @@
     color: #fff;
 }
 
+.title-container-detail .article_header_list {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.title-container-detail .article_header_list h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 120%;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: Quicksand-Bold, sans-serif !important;
+}
+
 .title-container .article_header h1 {
     font-size: 2.5em;
     font-weight: 600;
@@ -81,6 +96,16 @@
     width: 100%;
     top: 0;
     min-height: 95vh;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.title-container-detail {
+    position: relative;
+    width: 100%;
+    top: 0;
+    min-height: 60vh;
     background-attachment: fixed !important;
     background-position: center !important;
     background-size: cover !important;

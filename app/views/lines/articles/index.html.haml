@@ -1,6 +1,11 @@
-.rss
-  = link_to image_tag("ic_rss.png"), articles_url(format: "atom")
-#articles
+.title-container-detail{style: "background: url(#{asset_url('blogBanner')})"}
+  .image-overlay
+    .container
+      .row.mb-50
+        .col-12
+          .article_header_list
+            %h1 Blog
+.row.pt-60
   = render partial: 'article_small', locals: { article_small: @first_article, article_class: 'first', article_counter: -1 } unless @first_article.nil?
   = render partial: 'article_collection', collection: @articles
 - if @articles.total_pages > 1
