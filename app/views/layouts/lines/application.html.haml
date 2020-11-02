@@ -20,24 +20,13 @@
     = stylesheet_link_tag    "lines/application", media: "all"
     = javascript_include_tag "lines/application"
     = csrf_meta_tags
-  %body
+  %body.page-template.page-template-custom-page.page-template-custom-page-php.page.page-id-1446.theme-techland.nt-shortcode-1.0.woocommerce-no-js.color-style-5.Techland.nt-version-1.0.wpb-js-composer.js-comp-ver-6.0.5.vc_responsive
     - if current_lines_user
       = render_navbar do
         = link_to t('lines.buttons.new_article').html_safe, new_admin_article_path, class: "btn btn-new-article highlight"
         = link_to t('lines.buttons.dashboard').html_safe, admin_articles_path, class: "btn btn-view-blog"
-      .spacer
-    = render 'layouts/lines/markdown_cheatsheet'
     = render 'layouts/header_clean'
-    %header
-      #logo
-        %a{:href => "/"}
-          - if CONFIG[:logo].empty?
-            = CONFIG[:blog_name]
-          - else
-            %img{:alt => "#{CONFIG[:blog_name]}", :src => "#{CONFIG[:logo]}"}/
-      #lines
-        = CONFIG[:short_description].html_safe
-    .container
+    .wrapper
       = render 'lines/shared/flash'
       = yield
     = render 'layouts/footer'

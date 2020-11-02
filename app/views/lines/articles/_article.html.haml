@@ -1,27 +1,44 @@
-.article.first
-  - cache article do
-    - unless article.image_url.blank?
-      .hero_image
-        = link_to article_path(article) do
-          %img{:alt => "#{article.title}", :src => "#{article.image_url}"}/
-    .article_header
-      %h1= link_to article.title, article_path(article)
-      %h2= article.sub_title
+- cache article do
+  .title-container{style: "background: url(#{asset_url(article.image_url)})"}
+    .image-overlay
+      .container
+        .row.mb-50
+          .col-md-8
+            .article_header
+              %h1= link_to article.title, article_path(article)
+              %h2= article.sub_title
+          .col-md-4
+            .share-container
+              = image_tag 'icons/share', alt: "Compartir #{article.title}", id: 'share-button'
+              .social-contianer
+                %ul
+                  %li.share-social-li
+                    %a.share-social-icon{href: "https://www.facebook.com/sharer/sharer.php?u=https://www.intertecnicos.com#{article_path(article)}", target:"_blank", rel:"Compartir en Facebook"}
+                      %i.fa.fa-facebook
+                      Facebook
+                  %li.share-social-li
+                    %a.share-social-icon{href: "https://api.whatsapp.com/send?text=Mira%20este%20articulo:%20https://www.intertecnicos.com#{article_path(article)}", target:"_blank", rel:"Compartir en Whatsapp"}
+                      %i.fa.fa-whatsapp
+                      Whatsapp
+                  %li.share-social-li
+                    %a.share-social-icon{href: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.intertecnicos.com#{article_path(article)}", target:"_blank", rel:"Compartir en Twitter"}
+                      %i.fa.fa-linkedin
+                      Linkedln
+  .container.container-blog
+    .article.first
       .author_name
         %span by
         = display_article_authors(article)
-    .article_teaser
-      = render_teaser(article, article_counter)
-    .article_content
-      = markdown article.content
-      - if article.document?
-        .article_document
-          = link_to "Download #{article.document.file.filename}", article.document_url
-    - unless article.gplus_url.blank?
-      .article_googleplus
-        %a{:href => "#{article.gplus_url}"} Discuss this article at Google+
-    %hr/
-    .article_footer
-      Written on
-      %span.published_at= article.published_at.to_date
-      by #{display_article_authors(article, true)}
+      .article_teaser
+        = render_teaser(article, article_counter)
+      .article_content
+        = markdown article.content
+        - if article.document?
+          .article_document
+            = link_to "Download #{article.document.file.filename}", article.document_url
+      %hr/
+      .article_footer.container-blog
+        Publicado en
+        %span.published_at= article.published_at.to_date
+        %span{style: 'margin-left:10px'}
+          por #{display_article_authors(article, true)}

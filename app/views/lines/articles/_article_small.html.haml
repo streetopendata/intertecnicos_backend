@@ -1,4 +1,4 @@
-%div{:class => "article #{article_class}"}
+%div{:class => "article #{article_class} " }
   - cache "#{article_small}_small" do
     - unless article_small.image_url.blank?
       .hero_image
@@ -13,4 +13,4 @@
     .article_teaser
       = render_teaser(article_small).html_safe
       .more-link
-        = link_to "Read full article", article_path(article_small)
+        = link_to "Ver Mas", article_path(article_small)
