@@ -22,6 +22,8 @@
                           %li
                             %a.nav-link{:href => "javascript:goTo('services')"} Servicios
                           %li
+                            = link_to "Blog", lines_path, class: 'nav-link'
+                          %li
                             %a.nav-link{:href => "javascript:goTo('tell-us')"} Cuentanos
                           / <li><a class=nav-link href="javascript:goTo('blog')">Blog</a></li>
                           %li
@@ -63,7 +65,7 @@
                           %strong
                             %span{:style => "color: #007dc6;  "} Intertecnicos Ltda.
                           es una compañía especializada en diseño, planeación, gestión y ejecución  de proyectos del sector eléctrico industrial, comercial y residencial.
-                        %hr/                       
+                        %hr/
                         .spacer
                         %a.custom-btn.custom-btn--big.blue-solid{:href => "javascript:goTo('services')"} Saber mas
                       .col-12.col-md-10.col-lg-6
@@ -518,7 +520,7 @@
     #contact.nt-section.section{:name => "blog", :style => "background-image: url(#{image_url('contacto.jpg')});", :class => 'bg-img-algo' }
       .container
         .row.justify-content-lg-between.align-items-md-center
-          .nt-column.col-sm-12.col-lg-5.col-md-7.col-12 
+          .nt-column.col-sm-12.col-lg-5.col-md-7.col-12
             .start-screen__content-form.js-contact-form
               %h6.__subtitle.subTi Contactanos
               %h3 Nuestro propósito es establecer un canal de comunicación claro y efectivo con nuestros clientes
@@ -562,8 +564,8 @@
                   .wpcf7-response-output.wpcf7-display-none
           .nt-column.col-sm-12.col-lg-6.col-md-5.col-12
             .spacer.py-5.d-md-none
-    
-    
+
+
     = render 'layouts/footer'
 :javascript
 

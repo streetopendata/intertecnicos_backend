@@ -182,8 +182,8 @@ div#articles {
   font-family: 'Quicksand-Medium';
   text-align: justify;
   margin: 10px 0;
-  min-height: 12vh;
-  max-height: 12vh;
+  min-height: 10vh;
+  max-height: 10vh;
   text-overflow: ellipsis;
   white-space: pre-wrap;
   overflow: hidden;
@@ -222,7 +222,9 @@ div#articles {
 }
 
 .whatsapp-icon {
-  margin-top: 0;
+    top: -3px;
+    position: relative;
+
 }
 
 
@@ -238,6 +240,7 @@ div#articles {
 .icon-footer {
   max-width: 25px;
   margin-right: 8px;
+  font-family: 'Quicksand-Bold';
 }
 
 li.li-footer {
