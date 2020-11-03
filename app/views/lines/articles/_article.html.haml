@@ -8,7 +8,7 @@
               %h1= link_to article.title, article_path(article)
               %h2= article.sub_title
           .col-md-4
-            .share-container
+            .share-container.d-none.d-md-block.d-lg-block
               = image_tag 'icons/share', alt: "Compartir #{article.title}", id: 'share-button'
               .social-contianer
                 %ul
@@ -26,9 +26,14 @@
                       Linkedln
   .container.container-blog
     .article.first
-      .author_name
-        %span by
-        = display_article_authors(article)
+      .row
+        .col-6
+          .author_name
+            %span by
+            = display_article_authors(article)
+        .col-6
+          .share-container-mobile.d-block.d-md-none
+            = image_tag 'icons/share_green', alt: "Compartir #{article.title}", id: 'share-button-mobile'
       .article_teaser
         = render_teaser(article, article_counter)
       .article_content
@@ -38,7 +43,28 @@
             = link_to "Download #{article.document.file.filename}", article.document_url
       %hr/
       .article_footer.container-blog
-        Publicado en
-        %span.published_at= article.published_at.to_date
-        %span{style: 'margin-left:10px'}
+        %p
+          Publicado en
+          %span.published_at{style: 'margin-left: 3px'}= article.published_at.to_date
+        %p
           por #{display_article_authors(article, true)}
+
+
+:javascript
+  $(function(){
+    $('#share-button-mobile').click(function(e){
+      e.preventDefault()
+      if (navigator.share) {
+          navigator.share({
+            title: 'Blog Intertecnicos - ¡El blog de los expertos!',
+            text:  "Ya viste este articulo: #{article.title}",
+            url: "https://www.intertecnicos.com#{article_path(article)}",
+          })
+            .then(() => console.log('Successful share'))
+            .catch((error) => {
+              alert('Su navegador no es compatible con esta funcion')
+              console.log('Error sharing', error)
+            });
+      }
+    })
+  })

@@ -1198,7 +1198,7 @@ li.li-footer {
 }
 
 #share-button:hover + .social-contianer, .social-contianer:hover , .share-container:hover{
-  display: block !important;
+  display: block ;
 }
 
 .social-contianer:before {
@@ -1234,4 +1234,96 @@ a.share-social-icon i {
     padding: 2px 0px;
     min-width: 20px;
     text-align: revert;
+}
+
+
+
+/************************************************************************************
+smaller than 975px
+*************************************************************************************/
+@media screen and (max-width: 990px) {
+  header {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+
+/************************************************************************************
+smaller than 800px
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  .article {
+    .article_header,
+    .article_teaser,
+    .article_content {
+      & > * {
+        padding: 0 8%;
+      }
+    }
+  }
+}
+
+/************************************************************************************
+smaller than 600px
+*************************************************************************************/
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  .article.small {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/************************************************************************************
+smaller than 480px
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  .article {
+    .article_header h1 {
+      font-size: 2.5em;
+    }
+  }
+
+
+  .whatsapp {
+		right: 2vw;
+		width: 35px;
+    height: 35px;
+	}
+
+	.whatsapp-icon {
+    top: -10px;
+    font-size: 23px;
+    position: relative;
+	}
+
+	.article.small .article_header h1 {
+			min-height: none;
+			max-height: none;
+	}
+
+	h1.title-related {
+		text-align: center;
+	}
+
+	.rigth-footer {
+    align-items: revert;
+	}
+
+	.title-container-detail {
+			min-height: 35vh;
+	}
+
+
 }

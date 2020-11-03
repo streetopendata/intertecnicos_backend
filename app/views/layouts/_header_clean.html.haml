@@ -6,24 +6,32 @@
           .top-bar__inner
             .container-fluid
               .row.align-items-center.no-gutters
-                %a#nt-logo.top-bar__logo.site-logo{:href => root_url }
-                  =image_tag 'logo.svg', class: 'img-fluid main-logo img-logo-style'
+                %a#nt-logo.top-bar__logo.site-logo{:href => root_url}
+                  =image_tag('logo.svg', class: 'img-fluid main-logo img-logo-style', alt: 'Intertecnicos imagen', title: 'Intertecnicos imagen')
                 %a#top-bar__navigation-toggler.top-bar__navigation-toggler{:href => "javascript:void(0);"}
                   %span
                 .top-bar__collapse
                   %nav#top-bar__navigation.top-bar__navigation
-
+                    %ul
+                      %li
+                        %a.nav-link{:href => "/"} Home
+                      %li
+                        %a.nav-link{:href => "/"} Nosotros
+                      %li
+                        %a.nav-link{:href => "/"} Servicios
+                      %li
+                        %a.nav-link{:href => "/blog"} Blog
+                      %li
+                        %a.nav-link{:href => "/"} Cuentanos
+                      %li
+                        %a.nav-link{:href => "/motores-electricos"} Motores
+                      %li
+                        %a.nav-link{:href => "/"} Contacto
                   #top-bar__action.top-bar__action
                     .d-xl-flex.flex-xl-row.flex-xl-wrap.align-items-xl-center
-                      - if defined? customer_signed_in.present
-                        .top-bar__auth-btns
-                          - if customer_signed_in? || admin_signed_in?
-                            = link_to 'Salir', admin_signed_in? ? destroy_admin_session_path : destroy_customer_session_path , method: :delete ,  style: 'align-self: center;'
-                          - else
-                            = link_to 'Iniciar', new_customer_session_path , style: 'align-self: center;'
-                          - if !customer_signed_in? && !admin_signed_in?
-                            = link_to 'Registrarme', new_customer_registration_path , style: 'align-self: center;'
-
+                      .top-bar__auth-btns
+                        %a{:href => "/sedes-personal", :style => "color:tomato;", :target => " _blank"} Covid-19
+                        %a.custom-btn.custom-btn--medium.green-solid{:href => "/"} Escribenos
                       .top-bar__side-menu-button.js-side-menu-open
                         %span.line
                         %span.line
