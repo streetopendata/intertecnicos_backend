@@ -1,0 +1,138 @@
+= render 'layouts/mailing_landing_css'
+#app
+  #btn-to-top-wrap
+    %a#btn-to-top.circled{"data-visible-offset" => "800", :href => "javascript:void(0);"}
+  %main
+    = render 'layouts/header_clean'
+    .wrapper
+      .title-container{style: "background: url(#{ image_url('mail_landing/subestaciones.png')})"}
+        .image-overlay
+          .container
+            .row.mb-50
+              .col-md-6.mb-10{style: "display: flex;align-items: flex-end;"}
+                .article_header
+                  %h2.m-0{style: "font-size: 37px;font-weight: 400;"} Suministro, montaje, pruebas y mantenimiento de
+                  %h1.m-0{style: "font-size: 65px;"} Subestaciones Eléctricas
+              .col-md-6
+                .start-screen__content-form.js-contact-form{style: "border-radius: 10px;"}
+                  %h2{:style => "color: #00747f;  "} ¿Le interesa?
+                  %p.text-form
+                    Dejenos sus datos y un
+                    %strong{style:"font-weight: 900;font-family: 'Quicksand-Bold';"}
+                      experto se comunicará pronto con usted
+                  #wpcf7-f563-p1468-o1.wpcf7{:dir => "ltr", :lang => "en-US", :role => "form"}
+                    %form#frmSm.wpcf7-form{:action => "#", :method => "post", :novalidate => "novalidate"}
+                      %div{:style => "display: none;"}
+                      .input-wrp
+                        %span.wpcf7-form-control-wrap.text-74
+                          %input#compInp.inp-landing.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Compañía", :size => "40", :type => "text", :value => ""}/
+                      .input-wrp
+                        %span.wpcf7-form-control-wrap.text-74
+                          %input#nomInp.inp-landing.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Nombre completo", :size => "40", :type => "text", :value => ""}/
+                      .input-wrp
+                        %span.wpcf7-form-control-wrap.text-74
+                          %input#phoneInp.inp-landing.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.textfield--grey{"aria-invalid" => "false", "aria-required" => "true", :name => "text-74", :placeholder => "Número de celular.", :size => "40", :type => "text", :value => ""}/
+                      %div.text-center
+                        %input.wpcf7-form-control.wpcf7-submit.custom-btn.custom-btn--medium.custom-btn--style-1.wide{:type => "submit", :value => "Llamarme Ahora"}/
+                        %span
+                          Ó
+                        %button.wpcf7-form-control.wpcf7-submit.custom-btn.custom-btn--medium.custom-btn--style-24.wide
+                          .row
+                            .col-md-4.p-0
+                              = image_tag 'icons/ws', class: 'icon-form pull-right', alt: 'Icon', title: 'icon'
+                            .col-md-6.p-0.text-justify{style: "font-size: 19px;"}
+                              .span
+                                ¡ESCRIBENOS YA!
+                              %br/
+                              .span
+                                +57 311 541 2451
+                            .col-md-2.p-0.text-justify{style: "font-size: 19px;"}
+
+                      .wpcf7-response-output.wpcf7-display-none
+                .share-container.d-none.d-md-block.d-lg-block
+                  = image_tag 'icons/share', alt: "Compartir ", id: 'share-button'
+                  .social-contianer
+                    %ul
+                      %li.share-social-li
+                        %a.share-social-icon{href: "https://www.facebook.com/sharer/sharer.php?u=https://www.intertecnicos.com", target:"_blank", rel:"Compartir en Facebook"}
+                          %i.fa.fa-facebook
+                          Facebook
+                      %li.share-social-li
+                        %a.share-social-icon{href: "https://api.whatsapp.com/send?text=Mira%20este%20articulo:%20https://www.intertecnicos.com", target:"_blank", rel:"Compartir en Whatsapp"}
+                          %i.fa.fa-whatsapp
+                          Whatsapp
+                      %li.share-social-li
+                        %a.share-social-icon{href: "https://www.linkedin.com/sharing/share-offsite/?url=https://www.intertecnicos.com", target:"_blank", rel:"Compartir en Twitter"}
+                          %i.fa.fa-linkedin
+                          Linkedln
+      .container.container-blog
+        .article.first
+          .row
+            .col-6
+              .author_name
+                %span by
+
+            .col-6
+              .share-container-mobile.d-block.d-md-none
+                = image_tag 'icons/share_green', alt: "Compartir ", id: 'share-button-mobile'
+
+
+      #contact.nt-section.section{:name => "blog",  :class => 'bg-img-algo engine-bg' }
+        .container
+          .row.justify-content-lg-between.align-items-md-center
+            .nt-column.col-sm-12.col-lg-5.col-md-7.col-12
+
+
+            .nt-column.col-sm-12.col-lg-6.col-md-5.col-12
+              .spacer.py-5.d-md-none
+
+
+
+
+
+    = render 'layouts/footer'
+:javascript
+  $(document).ready(function(){
+
+      $('#frmSm').submit(function(e){
+            e.preventDefault()
+            var data = {
+                service_id: 'smtp_server',
+                template_id: 'template_AHHlzOkW',
+                user_id: 'user_JihHQvk8CoDaJ8e0xdYja',
+                template_params: {
+                    "from_name": $('#nomInp').val(),
+                        "compain": $('#compInp').val(),
+                        "phone": $('#phoneInp').val(),
+                        "from_email": $('#emailInp').val(),
+                        "message_html": $('#messInp').val()
+                }
+
+            };
+
+            $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                type: 'POST',
+                data: JSON.stringify(data),
+                contentType: 'application/json'
+            }).done(function() {
+                Swal.fire(
+                    '¡Listo!',
+                    'Tu mensaje ha sido entregado',
+                    'success'
+                    )
+
+                $('input[type=text],input[type=email], textarea').val('')
+
+            }).fail(function(error) {
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: JSON.stringify(error),
+                    })
+
+
+            });
+        })
+
+  })

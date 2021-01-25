@@ -22222,7 +22222,7 @@ form {
   }
 
   input.textfield {
-    height: 54px;  
+    height: 54px;
   }
 
   textarea {
@@ -31285,6 +31285,20 @@ i {
     -o-transition: none;
     transition: none;
   }
+  .form--horizontal .custom-btn.custom-btn--style-24, .js-contact-form .custom-btn.custom-btn--style-24, .authorization__form .custom-btn.custom-btn--style-24 {
+    background: #2dae2f;
+    background: #2dae2f;
+    background: #2dae2f;
+    background: #2dae2f;
+    background: #2dae2f;
+    background: #2dae2f;
+    background: #2dae2f;
+    color: #fff;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    padding: 0 0;
+  }
 }
 
 .color-style-6 {
@@ -31317,6 +31331,14 @@ i {
   background: #fff;
   border: solid 2px;
   color: #007DC6;
+}
+
+
+.js-contact-form .custom-btn.custom-btn--style-24:hover, .authorization__form .custom-btn.custom-btn--style-24:hover {
+  background-image: none;
+  background: #fff;
+  border: solid 2px;
+  color: #2dae2f !important;
 }
 
 .start-screen--style-10 .js-slick .custom-btn.custom-btn--style-3 {

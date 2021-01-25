@@ -7,8 +7,14 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'sedes-personal', to: 'home#sedes'
-  get 'motores-electricos', to: 'home#engines'
+  get 'home/motores-electricos', to: 'home#engines'
   get 'personal(.:format)', to: 'devise/registrations#new'
+
+  # Mails Landing Details
+  get 'plantas-electricas', to: 'home#electric_plants_details'
+  get 'redes-electricas', to: 'home#electric_networks_details'
+  get 'subestaciones-electricas', to: 'home#electric_substation_details'
+  get 'motores-electricos', to: 'home#electric_engines_details'
 
   get 'store', to: 'store#index'
   get 'workers', to: 'workers#index'
