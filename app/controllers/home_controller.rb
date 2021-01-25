@@ -10,8 +10,16 @@ class HomeController < ApplicationController
     @meta = [{:content => "Bobinado de motores, venta de motores, mantenimiento electrico, tableros industriales.",
             :property => "og:description"}, {:content => "Bobinado de motores, venta de motores, mantenimiento electrico, tableros industriales.",
                     :property => "description"}]
+  end
 
 
+  def electric_plants_details
+  end
+  def electric_networks_details
+  end
+  def electric_substation_details
+  end
+  def electric_engines_details
   end
 
   def download_intertecnicos
