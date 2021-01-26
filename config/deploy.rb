@@ -15,6 +15,8 @@ set :branch, "master"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public')
 set :linked_files, fetch(:linked_files, []).push('.env')
+set :rbenv_map_bins, fetch(:rbenv_map_bins).to_a.concat(%w(sidekiq sidekiqctl))
+
 set :rbenv_ruby, '2.5.1'
 
 # You can configure the Airbrussh format using :format_options.
