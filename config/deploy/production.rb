@@ -11,7 +11,7 @@ set :deploy_to, "/home/ubuntu/#{fetch(:application)}"
 
 set :puma_conf, "#{shared_path}/config/puma.rb"
 
-server '3.21.248.241', user: 'ubuntu', roles: %w{web app db}
+server '3.135.220.135', user: 'ubuntu', roles: %w{web app db}
 
 set :rails_env, 'production'
 
